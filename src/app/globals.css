@@ -54,7 +54,7 @@ a {
   background-color: transparent;
 }
 
-button {
+/* button {
   font-family: inherit;
   font-size: 100%;
   line-height: 1.15;
@@ -63,7 +63,7 @@ button {
   border-width: 0;
   padding: 0;
   cursor: pointer;
-}
+} */
 
 ul,
 ol,
