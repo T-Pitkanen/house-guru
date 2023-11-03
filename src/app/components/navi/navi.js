@@ -13,7 +13,7 @@ var styles = {
     marginTop: "1rem",
   },
   bmBurgerBars: {
-    background: "#0c0d11",
+    background: "#888888",
   },
   bmBurgerBarsHover: {
     background: "#a90000",
@@ -42,6 +42,7 @@ var styles = {
     padding: "0.8em",
     display: "flex",
     flexDirection: "column",
+    gap: '0.75rem',
   },
   bmItem: {
     display: "inline-block",
