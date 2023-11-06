@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { slide as Menu } from 'react-burger-menu';
 import { poppins } from '@/utils/fonts';
-
+import Image from 'next/image';
 var styles = {
 	bmBurgerButton: {
 		position: 'fixed',
@@ -54,6 +54,20 @@ var styles = {
 	},
 };
 
+const Logo = () => {
+	return (
+		<a href="page.js" className={styles.naviImage}>
+			<Image
+				src="/logo/logo.png"
+				alt="Logo"
+				width={100} // Set the desired width
+				height={75} // Set the desired height
+				style={{ position: 'fixed' }}
+			/>
+		</a>
+	);
+};
+
 const MenuBuild = ({ isOpen, onStateChange }) => {
 	return (
 		<Menu
@@ -99,6 +113,7 @@ const HamburgerMenu = () => {
 
 	return (
 		<div>
+			<Logo />
 			{windowWidth < 420 && (
 				<MenuBuild
 					isOpen={menuOpen}
