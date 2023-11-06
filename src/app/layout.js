@@ -1,6 +1,6 @@
 import { Poppins } from 'next/font/google';
 import HamburgerMenu from '../components/navi/navi';
-import Search from '@/components/search/search';
+import Search from '@/components/search/search.js';
 import './globals.css';
 
 const poppins = Poppins({ subsets: ['latin'], weight: '400' });

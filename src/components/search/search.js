@@ -16,7 +16,16 @@ const Background = () => {
 };
 
 const Search = () => {
-	return <div className={styles.searchContainer}>hello</div>;
+	return (
+		<div className={styles.searchContainer}>
+			<div className={styles.searchWrapper}>
+				<div className={styles.buttonWrapper}>
+					<button className={styles.searchButton}>Search Properties</button>
+					<button className={styles.searchButton}>Search Brokers</button>
+				</div>
+			</div>
+		</div>
+	);
 };
 
 export default Search;
