@@ -1,8 +1,20 @@
-.backgroundImage{
 
-  background-image: url('../../../public/backgound.jpg');
-  background-position: center;
-  background-size: cover;
+.backgroundImage {
+  /* background-image: url('../../../public/background.jpg'); */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 80vh;
+  z-index: -1; /* To place it behind other content */
+  object-fit: scale-down;
+}
+
+.backgroundImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ 
 }
 
 .searchContainer {
@@ -11,8 +23,8 @@
   justify-content: center;
 
   width: 100vw;
-  margin-top: 20vh;
-
+  margin-top: 30vh;
+  
   font-size: 17px;
 }
 
@@ -20,6 +32,7 @@
 
   width: 90vw;
   height: auto;
+  background-color: rgb(233, 233, 233);
 }
 
 
@@ -36,7 +49,7 @@
 
   width: 100%;
   padding: 1rem;
-  border: 1px #838383 solid;
+  border: 0.75px #838383 solid;
   background-color: var(--color-main);
 
   color: var(--color-text);
@@ -53,22 +66,22 @@
   display: flex;
   flex-direction: column;
 
-  padding: 1rem;
-  border-left: 1px solid #838383;
-  border-right: 1px solid #838383;
+  padding: 2rem 1rem;
+  border-left: 0.75px solid #838383;
+  border-right: 0.75px solid #838383;
 
   font-size: 15px;
   color: var(--color-text);
 
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .middleContainer input,
 .middleContainer select {
 
   padding: 0.5rem;
-  border: 1px solid #838383;
-  border-radius: 2px;
+  border: 0.75px solid #a1a1a1;
+  border-radius: 3px;
   background-color: white;
 
   color: #838383;
@@ -144,7 +157,7 @@
 
   width: 100%;
   padding: 1rem;
-  border: 1px solid #838383;
+  border: 0.75px solid #838383;
   background-color: var(--color-main);
 
   color: var(--color-text);

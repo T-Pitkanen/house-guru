@@ -5,6 +5,7 @@ import { slide as Menu } from 'react-burger-menu';
 import { poppins } from '@/utils/fonts';
 import Image from 'next/image';
 var styles = {
+	
 	bmBurgerButton: {
 		position: 'fixed',
 		width: '1rem',
