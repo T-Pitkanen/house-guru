@@ -3,6 +3,7 @@
 
   --color-main: #D8D1C9;
   --color-accent: #C7AA7F;
+  --color-text: #676767;
   --color-borders: #888888;
   --color-input: #FAFAFA;
   --color-placeholder: #888888;
@@ -55,16 +56,9 @@ a {
   background-color: transparent;
 }
 
-/* button {
-  font-family: inherit;
-  font-size: 100%;
-  line-height: 1.15;
-  background-color: transparent;
-  color: inherit;
-  border-width: 0;
-  padding: 0;
+button {
   cursor: pointer;
-} */
+} 
 
 ul,
 ol,
