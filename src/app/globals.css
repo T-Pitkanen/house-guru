@@ -4,7 +4,7 @@
   --color-main: #D8D1C9;
   --color-accent: #C7AA7F;
   --color-text: #676767;
-  --color-borders: #888888;
+  --color-borders: #e2e2e2;
   --color-input: #FAFAFA;
   --color-placeholder: #888888;
   --color-header: #595959;
@@ -19,7 +19,7 @@
   :root {
     --color-main: #D8D1C9;
     --color-accent: #C7AA7F;
-    --color-borders: #888888;
+    --color-borders: #acacac;
     --color-input: #FAFAFA;
     --color-placeholder: #888888;
     --color-header: #595959;
