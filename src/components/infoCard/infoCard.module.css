@@ -1,0 +1,60 @@
+.cardWrapper{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 3rem;
+}
+
+.cardContainer{
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 80%;
+    padding: 1rem 1rem 0 1rem;
+    border: 0.75px solid var(--color-borders);
+    background-color: #FFFFFF;
+
+    text-align: center;
+    color: var(--color-header);
+
+    gap: 1rem;
+}
+
+.cardContainer h2{
+
+
+    font-family: 'Playfair Display';
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.cardContainer p {
+
+
+    font-size: 13px;
+    text-align: center;
+}
+
+.cardContainer img{
+
+    height: 15vh;
+    border: 0.75px solid var(--color-borders);
+    border-top: none;
+
+    object-fit: cover;
+}
+
+.cardContainer button{
+
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-main-button);
+}

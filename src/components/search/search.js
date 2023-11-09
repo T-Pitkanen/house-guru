@@ -15,10 +15,16 @@ const SearchBuild = () => {
           <div className={styles.midFirst}>
             <div className={styles.radioWrapper}>
               {" "}
-              <input type="radio" id="rent" name="rent" value="rent"></input>
-              <label for="rent">Rent</label>
-              <input type="radio" id="buy" name="buy"></input>
-              <label for="buy">Buy</label>{" "}
+              <div className={styles.radio}>
+                {" "}
+                <input type="radio" id="rent" name="rent" value="rent"></input>
+                <label for="rent">Rent</label>
+              </div>
+              <div className={styles.radio}>
+                {" "}
+                <input type="radio" id="buy" name="buy"></input>
+                <label for="buy">Buy</label>{" "}
+              </div>
             </div>
             <div className={styles.idSearch}>
               <input
@@ -50,39 +56,46 @@ const SearchBuild = () => {
             </div>
           </div>
           <div className={styles.midThird}>
-            <div className={styles.price}>
+            <div>
+              {" "}
               <p>Price</p>
-              <input
-                type="number"
-                id="price"
-                name="price"
-                placeholder="min"
-              ></input>
-              <p>000€ -</p>
-              <input
-                type="number"
-                id="price"
-                name="price"
-                placeholder="max"
-              ></input>
-              <p>000€</p>
+              <div className={styles.price}>
+                <input
+                  type="number"
+                  id="price"
+                  name="price"
+                  placeholder="min"
+                ></input>
+                <p>000€</p>
+                <p>-</p>
+                <input
+                  type="number"
+                  id="price"
+                  name="price"
+                  placeholder="max"
+                ></input>
+                <p>000€</p>
+              </div>
             </div>
-            <div className={styles.size}>
+            <div>
+              {" "}
               <p>Square Meters</p>
-              <input
-                type="number"
-                id="min"
-                name="min"
-                placeholder="min"
-              ></input>
-              <p>-</p>
-              <input
-                type="number"
-                id="max"
-                name="max"
-                placeholder="max"
-              ></input>
-              <p>m²</p>
+              <div className={styles.size}>
+                <input
+                  type="number"
+                  id="min"
+                  name="min"
+                  placeholder="min"
+                ></input>
+                <p>-</p>
+                <input
+                  type="number"
+                  id="max"
+                  name="max"
+                  placeholder="max"
+                ></input>
+                <p>m²</p>
+              </div>
             </div>
           </div>
         </div>
@@ -93,21 +106,20 @@ const SearchBuild = () => {
 };
 
 const Background = () => {
-	return (
-	  <div className={styles.backgroundImage}>
-		<img src='background.jpg' alt="Background" />
-	  </div>
-	);
-  };
+  return (
+    <div className={styles.backgroundImage}>
+      <img src="background.jpg" alt="Background" />
+    </div>
+  );
+};
 
-
-  const Search = () => {
-	return (
-	  <>
-		<Background />
-		<SearchBuild />
-	  </>
-	);
-  };
+const Search = () => {
+  return (
+    <>
+      <Background />
+      <SearchBuild />
+    </>
+  );
+};
 
 export default Search;

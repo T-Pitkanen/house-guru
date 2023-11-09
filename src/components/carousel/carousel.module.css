@@ -1,8 +1,61 @@
+
+.carouselContainer hr{
+  width: 80%;
+}
+
+.carouselContainer{
+  background-color: #dfdfdf;
+  padding: 1rem 0;
+}
+
+
+.carouselContainer h2{
+  font-family: 'Playfair Display';
+  font-weight: 500;
+  font-size: 30px;
+  color: var(--color-header);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5vh;
+  
+}
+
+
 .crsl {
-    width: 80%;
+    width: 60%;
     margin: auto;
   }
 
   .crslImg{
     width: 100%;
   }
+
+  .legend{
+    color: var(--color-context);
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .legend h3{
+    font-family: "Playfair Display";
+    font-weight: 400;
+    color: var(--color-header);
+  }
+
+  .legend p {
+    font-size: 13px;
+  }
+
+  .legend button{
+    background-color: var(--color-main-button);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    width: 40%;
+}

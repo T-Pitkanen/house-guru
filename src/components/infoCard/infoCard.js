@@ -1,20 +1,20 @@
 import Image from "next/image";
-import styles from "./articleCard.module.css";
+import styles from "./infoCard.module.css";
 
-const articleData = [
+const infoData = [
   {
-    title: "Selling",
+    title: "Get property price estimate and much more!",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+      "By inviting our broker to your home, you will get an estimate of the value of your apartment and hear how it should be marketed.",
     button: "Read More",
-    image: "/selling.jpg",
+    image: "/assistance.jpg",
   },
   {
-    title: "Buying",
+    title: "Our Blog",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
     button: "Read More",
-    image: "/buying.jpg",
+    image: "/blogs.jpg",
   },
 ];
 
@@ -30,10 +30,10 @@ const CardBuild = ({ title, content, button, image }) => {
   );
 };
 
-const Card = () => {
+const InfoCard = () => {
   return (
     <div className={styles.cardWrapper}>
-      {articleData.map((card, index) => (
+      {infoData.map((card, index) => (
         <CardBuild
           key={index}
           title={card.title}
@@ -46,4 +46,13 @@ const Card = () => {
   );
 };
 
-export default Card;
+const InfoCardContainer = () => {
+    return (
+      <div className={styles.infoCardContainer}>
+        <h3>Mauris ultrices eros in cursus turpis massa</h3>
+        <InfoCard />
+      </div>
+    );
+  };
+  
+  export default InfoCardContainer;
