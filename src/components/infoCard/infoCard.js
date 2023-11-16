@@ -12,7 +12,7 @@ const infoData = [
   {
     title: "Our Blog",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+      "Our blog is designed to help you at all stages, whether you're selling a house, purchasing your dream home, or just looking for professional guidance. ",
     button: "Read More",
     image: "/blogs.jpg",
   },
@@ -49,7 +49,6 @@ const InfoCard = () => {
 const InfoCardContainer = () => {
     return (
       <div className={styles.infoCardContainer}>
-        <h3>Mauris ultrices eros in cursus turpis massa</h3>
         <InfoCard />
       </div>
     );

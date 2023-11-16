@@ -5,7 +5,7 @@
 
 .carouselContainer{
   background-color: #dfdfdf;
-  padding: 1rem 0;
+  padding: 1.75rem 0;
 }
 
 
@@ -58,4 +58,5 @@
     padding: 0.5rem 1rem;
     border-radius: 5px;
     width: 40%;
+    color: rgb(231, 231, 231);
 }

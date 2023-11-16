@@ -5,14 +5,14 @@ const articleData = [
   {
     title: "Selling",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+      "We can help you with downsizing, moving, or simply seeking for a change in the real estate market so you can continue with confidence and comfort.",
     button: "Read More",
     image: "/selling.jpg",
   },
   {
     title: "Buying",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+      "Every year, we assist hundreds of customers on their housing journey. With our extensive market knowledge, we can confidently guide you through all stages of your home purchase.",
     button: "Read More",
     image: "/buying.jpg",
   },

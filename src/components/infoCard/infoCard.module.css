@@ -17,7 +17,6 @@
     justify-content: center;
 
     width: 80%;
-    padding: 1rem 1rem 0 1rem;
     border: 0.75px solid var(--color-borders);
     background-color: #FFFFFF;
 
@@ -25,6 +24,7 @@
     color: var(--color-header);
 
     gap: 1rem;
+    padding-top: 1rem;
 }
 
 .cardContainer h2{
@@ -40,10 +40,12 @@
 
     font-size: 13px;
     text-align: center;
+    padding: 0 1rem;
 }
 
 .cardContainer img{
 
+    width: 100%;
     height: 15vh;
     border: 0.75px solid var(--color-borders);
     border-top: none;
@@ -56,5 +58,6 @@
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 5px;
+    color: rgb(231, 231, 231);
     background-color: var(--color-main-button);
 }

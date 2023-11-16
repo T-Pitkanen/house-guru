@@ -3,5 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 8rem;
+    color: #595959;
+    margin-bottom: 15vh;
 }

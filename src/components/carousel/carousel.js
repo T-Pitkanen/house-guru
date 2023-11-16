@@ -7,20 +7,20 @@ const Slider = () => {
   const images = [
     {
       id: "102",
-      address: "Lorem ipsum 5842",
-      info: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      address: "Elmehaven 6A, 9012 Fuglesangkvarteret",
+      info: "This charming townhouse in the Fuglesangkvarteret offers a beautiful stone yard and a cozy courtyard surrounded by majestic elm trees.",
       src: "featuring-1.jpg",
     },
     {
       id: "103",
-      address: "Lorem ipsum 5842",
-      info: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      address: "Morgenstjernevej 8, 7890 Højbjerg",
+      info: "This modern town house in Højbjerg offers a spacious living room with high ceilings and large windows that provide plenty of natural light.",
       src: "featuring-2.jpg",
     },
     {
       id: "104",
-      address: "Lorem ipsum 5842",
-      info: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      address: "Birkelunden 33, 2345 Søsiden",
+      info: "This spacious apartment in Søsiden has a large balcony with a fantastic view over the lake.",
       src: "featuring-3.jpg",
     },
   ];
