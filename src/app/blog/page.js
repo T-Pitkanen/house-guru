@@ -1,9 +1,16 @@
-'use client';
+// src/app/BlogPage.js
 
-import styles from './page.module.css';
+'use client'
 
-const Blog = () => {
-	return <div className={styles.page}></div>;
+import BlogList from "@/components/blogPages";
+import styles from "./page.module.css"
+
+const BlogPage = () => {
+  return (
+    <div className={styles.page}>
+      <BlogList />
+    </div>
+  );
 };
 
-export default Blog;
+export default BlogPage;
