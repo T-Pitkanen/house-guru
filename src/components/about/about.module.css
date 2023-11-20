@@ -1,4 +1,4 @@
-.aboutContainer{
+.aboutContainer {
     background-color: #dfdfdf;
     padding: 2rem 0;
     width: 100%;
@@ -6,7 +6,7 @@
     justify-content: center;
 }
 
-.aboutWrapper{
+.aboutWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -16,7 +16,7 @@
     width: 80%;
 }
 
-.aboutWrapper h2{
+.aboutWrapper h2 {
     font-family: "Playfair Display";
     font-weight: 500;
 }
@@ -25,11 +25,30 @@
     font-size: 13px;
 }
 
-.aboutWrapper button{
+.aboutWrapper button {
     background-color: var(--color-main-button);
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     color: rgb(231, 231, 231);
     font-size: 13px;
+}
+
+@media (min-width:1280px) and (max-width:1600px) {
+
+
+    .aboutWrapper h2 {
+        font-size: 25px
+    }
+
+    .aboutWrapper p {
+        font-size: 16px;
+    }
+
+    .aboutWrapper {
+
+        gap: 1.75rem;
+        width: 35%;
+    }
+
 }

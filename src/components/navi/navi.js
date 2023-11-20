@@ -5,7 +5,6 @@ import { slide as Menu } from 'react-burger-menu';
 import { poppins } from '@/utils/fonts';
 import Image from 'next/image';
 var styles = {
-	
 	bmBurgerButton: {
 		position: 'fixed',
 		width: '1rem',
@@ -82,10 +81,13 @@ const MenuBuild = ({ isOpen, onStateChange }) => {
 				Home
 			</a>
 			<a id="about" className="menu-item" href="/about">
-				About
+				Buy
+			</a>
+			<a id="about" className="menu-item" href="/about">
+				Sell
 			</a>
 			<a id="services" className="menu-item" href="/services">
-				Services
+				Blog
 			</a>
 			<a id="contact" className="menu-item" href="/contact">
 				Contact
