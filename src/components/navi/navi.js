@@ -56,7 +56,7 @@ var styles = {
 
 const Logo = () => {
 	return (
-		<a href="page.js" className={styles.naviImage}>
+		<a href="/" className={styles.naviImage}>
 			<Image
 				src="/logo/logo.png"
 				alt="Logo"
@@ -86,7 +86,7 @@ const MenuBuild = ({ isOpen, onStateChange }) => {
 			<a id="about" className="menu-item" href="/about">
 				Sell
 			</a>
-			<a id="services" className="menu-item" href="/services">
+			<a id="services" className="menu-item" href="/blog">
 				Blog
 			</a>
 			<a id="contact" className="menu-item" href="/contact">

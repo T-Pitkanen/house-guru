@@ -1,16 +1,24 @@
-// src/app/BlogPage.js
+import Image from 'next/image'
+import styles from './page.module.css'
+import Posts from '@/components/posts/posts'
+import Post from '@/components/post/post'
 
-'use client'
 
-import BlogList from "@/components/blogPages";
-import styles from "./page.module.css"
 
-const BlogPage = () => {
+const PostsPage = () => {
+
+
+
   return (
-    <div className={styles.page}>
-      <BlogList />
-    </div>
-  );
-};
+    <div className={styles.blog} >
+ 
+      <h1>Blog</h1>
+      <Posts></Posts>
 
-export default BlogPage;
+
+    </div>
+  )
+}
+
+export default PostsPage
+

@@ -1,8 +1,15 @@
-.page {
-    color: black;
+.blog{
+    margin-top: 10vh;
     width: 100%;
-    height: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: #505050;
+}
+
+.blog h1 {
+    font-family: 'Playfair Display', 'serif';
+    font-weight: 500;
+    padding-bottom: 8vh;
 }
