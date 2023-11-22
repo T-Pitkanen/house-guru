@@ -1,0 +1,32 @@
+.formWrapper {
+  width: 60%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="tel"] {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fafafa;
+}
+
+.form input[type="submit"] {
+  background-color: var(--color-main-button);
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 50%;
+}
