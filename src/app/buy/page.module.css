@@ -1,0 +1,9 @@
+.page{
+    color: black;
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}

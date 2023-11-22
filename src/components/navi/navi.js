@@ -80,7 +80,7 @@ const MenuBuild = ({ isOpen, onStateChange }) => {
 			<a id="home" href="/">
 				Home
 			</a>
-			<a id="about" className="menu-item" href="/about">
+			<a id="about" className="menu-item" href="/buy">
 				Buy
 			</a>
 			<a id="about" className="menu-item" href="/about">
