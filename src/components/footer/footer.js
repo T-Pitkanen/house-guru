@@ -6,12 +6,12 @@ import { FaLinkedin } from 'react-icons/fa';
 
 const Logo = () => {
 	return (
-		<a href="page.js" className={styles.footerImage}>
+		<a href="/" className={styles.footerImage}>
 			<Image
 				src="/logo/logo.png"
 				alt="Logo"
-				width={100} // Set the desired width
-				height={75} // Set the desired height
+				width={120} // Set the desired width
+				height={90} // Set the desired height
 			/>
 		</a>
 	);
@@ -62,7 +62,7 @@ const FooterBuild = ({ footerData }) => {
 						<div className={styles.links}>
 							<h4>SELL</h4>
 							{sell.map((item, index) => (
-								<p key={index}>
+								<p key={index} style={{ height: '20px' }}>
 									<a href={item.link}>{item.label}</a>
 								</p>
 							))}
@@ -70,7 +70,7 @@ const FooterBuild = ({ footerData }) => {
 						<div className={styles.links}>
 							<h4>BUY</h4>
 							{buy.map((item, index) => (
-								<p key={index}>
+								<p key={index} style={{ height: '20px' }}>
 									<a href={item.link}>{item.label}</a>
 								</p>
 							))}
@@ -78,7 +78,7 @@ const FooterBuild = ({ footerData }) => {
 						<div className={styles.links}>
 							<h4>RENT</h4>
 							{rent.map((item, index) => (
-								<p key={index}>
+								<p key={index} style={{ height: '20px' }}>
 									<a href={item.link}>{item.label}</a>
 								</p>
 							))}
@@ -88,7 +88,7 @@ const FooterBuild = ({ footerData }) => {
 						<div className={styles.links}>
 							<h4>ABOUT US</h4>
 							{aboutUs.map((item, index) => (
-								<p key={index}>
+								<p key={index} style={{ height: '20px' }}>
 									<a href={item.link}>{item.label}</a>
 								</p>
 							))}
@@ -96,7 +96,7 @@ const FooterBuild = ({ footerData }) => {
 						<div className={styles.links}>
 							<h4>BLOG</h4>
 							{blog.map((item, index) => (
-								<p key={index}>
+								<p key={index} style={{ height: '20px' }}>
 									<a href={item.link}>{item.label}</a>
 								</p>
 							))}
