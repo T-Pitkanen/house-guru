@@ -4,29 +4,39 @@ import React from 'react';
 import { getPropertyById, getPropertiesByTitle } from '@/services/properties.service';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import styles from './page.module.css';
 import GoBackButton from '@/components/goBack/goBack';
 
 const PropertyPage = ({ params }) => {
+
+	const router = useRouter();
+	
 	const { id } = params;
 
+	console.log('id prop in PropertyPage component:', id);
+	
 	const [property, setProperties] = useState({});
 
 	useEffect(() => {
 		getPropertyById(id).then((data) => {
+		  if (data) {
 			const propertyData = {
-				address: data.address,
-				description: data.description,
-				image: data.image,
-				price: data.price,
-				square_meters: data.square_meters,
-				type: data.type,
-				bathrooms: data.bathrooms,
-				bedrooms: data.bedrooms,
+			  address: data.address,
+			  description: data.description,
+			  image: data.image,
+			  price: data.price,
+			  square_meters: data.square_meters,
+			  type: data.type,
+			  bathrooms: data.bathrooms,
+			  bedrooms: data.bedrooms,
 			};
 			setProperties(propertyData);
+		  } else {
+			console.error(`No data returned for id: ${id}`);
+		  }
 		});
-	}, [id]);
+	  }, [id]);
 
 	return (
 		<div className={styles.postContainer}>

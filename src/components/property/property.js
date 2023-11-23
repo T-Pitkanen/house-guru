@@ -3,6 +3,7 @@ import styles from './property.module.css';
 import Link from 'next/link';
 
 const Property = ({ property }) => {
+	console.log('property.id:', property.id);
 	console.log('Rendering property', property);
 	return (
 		<div className={styles.propertyContainer}>
@@ -15,7 +16,7 @@ const Property = ({ property }) => {
 					<div className={styles.info}>
 						<div className={styles.address}>{property.address}</div>
 						<div className={styles.description}>{property.description}</div>
-						<Link href={`/buy/${property._id}`}>
+						<Link href={`/buy/${property.id}`}>
 							<button className={styles.button}>Read More</button>
 						</Link>
 					</div>
