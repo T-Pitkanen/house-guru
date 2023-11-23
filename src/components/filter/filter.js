@@ -40,12 +40,13 @@ const FilterBuild = () => {
     setMaxPrice("");
     setMinSize("");
     setMaxSize("");
+    setLocation("");
 
     router.push("/buy");
   };
 
   const handleFilter = () => {
-    console.log('Filtering properties with type:', type); 
+    console.log("Filtering properties with type:", type);
     setIsLoading(true);
 
     const filtered = properties.filter(
@@ -56,13 +57,13 @@ const FilterBuild = () => {
         (minPrice ? property.price >= minPrice : true) &&
         (maxPrice ? property.price <= maxPrice : true) &&
         (minSize ? property.square_meters >= minSize : true) &&
-        (maxSize ? property.square_meters <= maxSize : true)
+        (maxSize ? property.square_meters <= maxSize : true) &&
+        (location ? property.location.includes(location) : true)
     );
 
     setTimeout(() => {
-
       console.log("Type before creating URL:", type);
-      console.log('Filtered properties:', filtered);
+      console.log("Filtered properties:", filtered);
 
       setFilteredProperties(filtered);
 
@@ -70,10 +71,11 @@ const FilterBuild = () => {
 
       setIsLoading(false);
 
-  
+      console.log("location:", location);
 
       const params = new URLSearchParams({
         id,
+        location,
         address,
         type,
         minPrice,
@@ -85,6 +87,9 @@ const FilterBuild = () => {
     }, 1000);
   };
 
+  const capitalizeFirstLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  };
 
   return (
     <div className={styles.searchContainer}>
@@ -110,7 +115,9 @@ const FilterBuild = () => {
                 id="address"
                 name="address"
                 placeholder="Type address"
-                onChange={(event) => setAddress(event.target.value)}
+                onChange={(event) =>
+                  setAddress(capitalizeFirstLetter(event.target.value))
+                }
               ></input>
             </div>
             <div className={styles.locationSearch}>
@@ -120,7 +127,9 @@ const FilterBuild = () => {
                 id="location"
                 name="location"
                 placeholder="Type location"
-                onChange={(event) => setLocation(event.target.value)}
+                onChange={(event) =>
+                  setLocation(capitalizeFirstLetter(event.target.value))
+                }
               ></input>
             </div>
             <div className={styles.typeSelect}>
@@ -189,15 +198,12 @@ const FilterBuild = () => {
           Search
         </button>
         <button className={styles.resetProperties} onClick={resetFilter}>
-        Reset
-      </button>
-      
+          Reset
+        </button>
       </div>
     </div>
   );
 };
-
-
 
 const Filter = () => {
   return (

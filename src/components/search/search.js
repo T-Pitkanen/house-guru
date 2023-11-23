@@ -46,7 +46,8 @@ const SearchBuild = () => {
         (minPrice ? property.price >= minPrice : true) &&
         (maxPrice ? property.price <= maxPrice : true) &&
         (minSize ? property.square_meters >= minSize : true) &&
-        (maxSize ? property.square_meters <= maxSize : true)
+        (maxSize ? property.square_meters <= maxSize : true) &&
+        (location ? property.location.includes(location) : true)
     );
     setTimeout(() => {
       setFilteredProperties(filtered);
@@ -60,9 +61,14 @@ const SearchBuild = () => {
         maxPrice,
         minSize,
         maxSize,
+        location
       }).toString();
       router.push(`/buy?${params}`);
     }, 1000);
+  };
+
+  const capitalizeFirstLetter = (string) => {
+    return string.charAt(0).toUpperCase() + string.slice(1);
   };
 
   return (
@@ -93,7 +99,7 @@ const SearchBuild = () => {
                 id="address"
                 name="address"
                 placeholder="Type address"
-				onChange={event => setAddress(event.target.value)}
+                onChange={(event) => setAddress(capitalizeFirstLetter(event.target.value))}
               ></input>
             </div>
             <div className={styles.locationSearch}>
@@ -103,7 +109,7 @@ const SearchBuild = () => {
                 id="location"
                 name="location"
                 placeholder="Type location"
-				onChange={event => setLocation(event.target.value)}
+                onChange={(event) => setLocation(capitalizeFirstLetter(event.target.value))}
               ></input>
             </div>
             <div className={styles.typeSelect}>
