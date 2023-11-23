@@ -3,6 +3,7 @@ import styles from './property.module.css';
 import Link from 'next/link';
 
 const Property = ({ property }) => {
+	console.log('Rendering property', property);
 	return (
 		<div className={styles.propertyContainer}>
 			<div className={styles.header}>

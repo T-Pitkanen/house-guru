@@ -13,7 +13,7 @@ const Properties = ({recommended}) => {
 
       const data = await getPropertyDataMock();
 
-      let filteredData = recommended ? data.filter( (post) => property.recommended === true ) : data;
+      let filteredData = recommended ? data.filter( (property) => property.recommended === true ) : data;
 
       setProperties(filteredData);
 
