@@ -59,7 +59,7 @@ export const getPostDataMock = async () => {
 			title: 'Are you dreaming of buying your first home?',
 			image: '/blog/blog-first.jpg',
 			subtitle:
-				'Buying your first home is a big decision that marks the beginning of an exciting one journey into the world of real estate.',
+				'Buying your first home is a big decision that marks the beginning of an exciting  journey.',
 			content_1:
 				"Buying your first home is a big decision that marks the beginning of an exciting one journey into the world of real estate. It is a milestone that represents stability, freedom and one investment in your future. We understand how important this decision is, and we're here to guide you along the way.",
 			title_2: 'Expertise, advice and trust',

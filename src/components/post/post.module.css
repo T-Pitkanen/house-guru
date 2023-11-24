@@ -1,7 +1,7 @@
 .postContainer {
     width: 70%;
-    border: 0.75px solid #919191;
-    border-radius: 5px;
+    border: 0.75px solid #afafaf;
+    border-radius: 3px;
     margin-bottom: 5vh;
 }
 
@@ -23,9 +23,12 @@
 }
 
 .titleAnother {
-    font-family: 'Playfair Display', 'serif';
+    /* font-family: 'Playfair Display', 'serif'; */
     font-weight: 500;
-    font-size: 18px;
+    font-size: 15px;
+    color: #494949;
+    letter-spacing: 1px;
+
 }
 
 
@@ -34,10 +37,10 @@
 }
 
 .button {
-
+    margin-top: 1vh;
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 5px;
-    color: rgb(231, 231, 231);
+    color: rgb(211, 211, 211);
     background-color: var(--color-main-button);
 }

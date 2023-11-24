@@ -44,7 +44,7 @@
 
 /* General sidebar styles */
 .bm-menu {
-  background: #373a47;
+  background: #e7e3de;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
@@ -56,7 +56,7 @@
 
 /* Wrapper for item list */
 .bm-item-list {
-  color: #b8b7ad;
+  color: #292929;
   padding: 0.8em;
 }
 
@@ -67,5 +67,5 @@
 
 /* Styling of overlay */
 .bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.733);
 }

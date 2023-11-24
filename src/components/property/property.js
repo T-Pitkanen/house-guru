@@ -24,7 +24,7 @@ const Property = ({ property }) => {
               <div className={styles.location}>{property.location}</div>
             </div>
 
-            <div className={styles.size}>{property.square_meters} m²</div>
+            {/* <div className={styles.size}>{property.square_meters} m²</div> */}
           </div>
 
           <div className={styles.details}>

@@ -40,7 +40,7 @@ export const getPropertyDataMock = async () => {
       square_meters: 232,
       price: '450,000',
       description:
-        "House with 4 bedrooms and 3 bathrooms in Cityville",
+        "House with 4 bedrooms and 3 bathrooms",
       image: "/properties/house-dining.jpg",
     },
     {
@@ -53,7 +53,7 @@ export const getPropertyDataMock = async () => {
       square_meters: 102,
       price: '650,000',
       description:
-        "Summerhouse with 4 bedrooms and 2 bathrooms in Cityville",
+        "Summerhouse with 4 bedrooms and 2 bathrooms",
       image: "/properties/house-livingroom.jpg",
     },
     {
@@ -66,7 +66,7 @@ export const getPropertyDataMock = async () => {
       square_meters: 102,
       price: '850,000',
       description:
-        "Apartment with 2 bedrooms and 2 bathrooms in Villagetown",
+        "Apartment with 2 bedrooms and 2 bathrooms",
         image: "/properties/house-kitchen.jpg",
     },
     {
@@ -79,7 +79,7 @@ export const getPropertyDataMock = async () => {
       square_meters: 102,
       price: '80,000',
       description:
-        "Summerhouse with 2 bedrooms and 1 bathroom in Suburbia",
+        "Summerhouse with 2 bedrooms and 1 bathroom",
         image: "/properties/house-dining.jpg",
     },
     {
@@ -92,7 +92,7 @@ export const getPropertyDataMock = async () => {
       square_meters: 152,
       price: '450,000',
       description:
-        "House with 5 bedrooms and 4 bathrooms in Suburbia",
+        "House with 5 bedrooms and 4 bathrooms",
         image: "/properties/house-room.jpg",
     },
     {
@@ -105,7 +105,7 @@ export const getPropertyDataMock = async () => {
       square_meters: 70,
       price: '125,000',
       description:
-        "Summerhouse with 3 bedrooms and 2 bathrooms in Riverside",
+        "Summerhouse with 3 bedrooms and 2 bathrooms",
         image: "/properties/house-kitchen.jpg",
     },
     {
@@ -118,7 +118,7 @@ export const getPropertyDataMock = async () => {
       square_meters: 90,
       price: '100,000',
       description:
-        "House with 1 bedroom and 1 bathroom in Riverside",
+        "House with 1 bedroom and 1 bathroom",
         image: "/properties/house-room.jpg",
     },
     {
@@ -131,7 +131,7 @@ export const getPropertyDataMock = async () => {
       square_meters: 50,
       price: '95,000',
       description:
-        "Apartment with 1 bedroom and 1 bathroom in Riverside",
+        "Apartment with 1 bedroom and 1 bathroom",
         image: "/properties/house-dining.jpg",
     },
     {
@@ -144,7 +144,7 @@ export const getPropertyDataMock = async () => {
       square_meters: 350,
       price: '1,750,000',
       description:
-        "Summerhouse with 8 bedrooms and 7 bathrooms in Villagetown",
+        "Summerhouse with 8 bedrooms and 7 bathrooms",
         image: "/properties/apartment-alrum.jpg",
     },
     {
@@ -157,7 +157,7 @@ export const getPropertyDataMock = async () => {
       square_meters: 80,
       price: '120,000',
       description:
-        "Apartment with 2 bedrooms and 2 bathrooms in Cityville for 120,000€",
+        "Apartment with 2 bedrooms and 2 bathrooms",
         image: "/properties/apartmen3-alrum.jpg",
     },
     {
@@ -170,7 +170,7 @@ export const getPropertyDataMock = async () => {
       square_meters: 50,
       price: '350,000',
       description:
-        "House with 1 bedroom and 1 bathroom in Anytown for 350,000€",
+        "House with 1 bedroom and 1 bathroom",
         image: "/properties/apartmen2-alrum.jpg",
     },
     {
@@ -183,7 +183,7 @@ export const getPropertyDataMock = async () => {
       square_meters: 232,
       price: '450,000',
       description:
-        "House with 4 bedrooms and 3 bathrooms in Cityville",
+        "House with 4 bedrooms and 3 bathrooms",
       image: "/properties/house-dining.jpg",
     },
     {
@@ -196,7 +196,7 @@ export const getPropertyDataMock = async () => {
       square_meters: 232,
       price: '450,000',
       description:
-        "House with 4 bedrooms and 3 bathrooms in Cityville",
+        "House with 4 bedrooms and 3 bathrooms",
       image: "/properties/house-dining.jpg",
     },
     {
@@ -209,7 +209,7 @@ export const getPropertyDataMock = async () => {
       square_meters: 232,
       price: '450,000',
       description:
-        "House with 4 bedrooms and 3 bathrooms in Cityville",
+        "House with 4 bedrooms and 3 bathrooms",
       image: "/properties/house-dining.jpg",
     },
     {
@@ -222,7 +222,7 @@ export const getPropertyDataMock = async () => {
       square_meters: 232,
       price: '450,000',
       description:
-        "House with 4 bedrooms and 3 bathrooms in Cityville",
+        "House with 4 bedrooms and 3 bathrooms",
       image: "/properties/house-dining.jpg",
     },
   ];

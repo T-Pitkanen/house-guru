@@ -32,7 +32,7 @@ var styles = {
 		height: '100%',
 	},
 	bmMenu: {
-		background: '#D8D1C9',
+		background: '#e7e3de',
 		padding: '2.5em 1.5em 0',
 		fontSize: '1.15em',
 	},
@@ -40,17 +40,17 @@ var styles = {
 		fill: '#373a47',
 	},
 	bmItemList: {
-		color: '#595959',
+		color: '#292929',
 		padding: '0.8em',
 		display: 'flex',
 		flexDirection: 'column',
-		gap: '0.75rem',
+		gap: '1.5rem',
 	},
 	bmItem: {
 		display: 'inline-block',
 	},
 	bmOverlay: {
-		background: '#FAFAFA',
+		background: 'rgba(0, 0, 0, 0.8)',
 	},
 };
 

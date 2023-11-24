@@ -36,16 +36,22 @@ const PostPage = ({ params }) => {
 				<div className={styles.postWrapper}>
 					<div className={styles.headerWrapper}>
 						<h1>{post.title}</h1>
-					</div>
-					<div className={styles.contentWrapper}>
-						<div className={styles.content}>
-							<div>{post.content}</div>
-							<Image
+						<Image
 								src={post.image}
 								alt={post.title}
 								width={300}
 								height={300}
-							/>{' '}
+							/>
+					</div>
+					<div className={styles.contentWrapper}>
+						<div className={styles.content}>
+							<div>{post.content}</div>
+							{/* <Image
+								src={post.image}
+								alt={post.title}
+								width={300}
+								height={300}
+							/>{' '} */}
 							{post.posts.map((data, index) => (
 								<React.Fragment key={index}>
 									<div className={styles.postTitle}>{data.title}</div>
