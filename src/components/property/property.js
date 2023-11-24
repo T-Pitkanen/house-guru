@@ -3,8 +3,8 @@ import styles from './property.module.css';
 import Link from 'next/link';
 
 const Property = ({ property }) => {
-	console.log('property.id:', property.id);
-	console.log('Rendering property', property);
+	// console.log('property.id:', property.id);
+	// console.log('Rendering property', property);
 	return (
 		<div className={styles.propertyContainer}>
 			<div className={styles.header}>

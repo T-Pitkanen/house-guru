@@ -71,7 +71,7 @@ const FilterBuild = () => {
 
       setIsLoading(false);
 
-      console.log("location:", location);
+      // console.log("location:", location);
 
       const params = new URLSearchParams({
         id,
@@ -92,9 +92,23 @@ const FilterBuild = () => {
   };
 
   return (
-    <div className={styles.searchContainer}>
-      <div className={styles.filterWrapper}>
+    <div className={styles.filterContainer}>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleFilter();
+        }}
+        className={styles.filterWrapper}
+      >
         <div className={styles.middleContainer}>
+          <div className={styles.selectWrapper}>
+            <select value={type} onChange={(e) => setType(e.target.value)}>
+              <option value="">House type</option>
+              <option value="Summerhouse">Summerhouse</option>
+              <option value="Apartment">Apartment</option>
+              <option value="House">House</option>
+            </select>
+          </div>
           <div className={styles.midFirst}>
             <div className={styles.idSearch}>
               <input
@@ -114,7 +128,7 @@ const FilterBuild = () => {
                 type="text"
                 id="address"
                 name="address"
-                placeholder="Type address"
+                placeholder="Search with address"
                 onChange={(event) =>
                   setAddress(capitalizeFirstLetter(event.target.value))
                 }
@@ -126,23 +140,15 @@ const FilterBuild = () => {
                 type="text"
                 id="location"
                 name="location"
-                placeholder="Type location"
+                placeholder="Search with location"
                 onChange={(event) =>
                   setLocation(capitalizeFirstLetter(event.target.value))
                 }
               ></input>
             </div>
-            <div className={styles.typeSelect}>
-              <select value={type} onChange={(e) => setType(e.target.value)}>
-                <option value="">Select a type</option>
-                <option value="Summerhouse">Summerhouse</option>
-                <option value="Apartment">Apartment</option>
-                <option value="House">House</option>
-              </select>
-            </div>
           </div>
           <div className={styles.midThird}>
-            <div>
+            <div className={styles.priceContainer}>
               {" "}
               <p>Price</p>
               <div className={styles.price}>
@@ -154,7 +160,6 @@ const FilterBuild = () => {
                   placeholder="min"
                   onChange={(event) => setMinPrice(event.target.value)}
                 ></input>
-                <p>000€</p>
                 <p>-</p>
                 <input
                   value={maxPrice}
@@ -164,10 +169,10 @@ const FilterBuild = () => {
                   placeholder="max"
                   onChange={(event) => setMaxPrice(event.target.value)}
                 ></input>
-                <p>000€</p>
+                <p>€</p>
               </div>
             </div>
-            <div>
+            <div className={styles.sizeContainer}>
               {" "}
               <p>Square Meters</p>
               <div className={styles.size}>
@@ -193,14 +198,21 @@ const FilterBuild = () => {
             </div>
           </div>
         </div>
-        <button className={styles.searchProperties} onClick={handleFilter}>
-          <FaSearch className={styles.searchIcon} />
-          Search
-        </button>
-        <button className={styles.resetProperties} onClick={resetFilter}>
-          Reset
-        </button>
-      </div>
+        <div className={styles.buttons}>
+          {" "}
+          <button
+            type="submit"
+            className={styles.searchProperties}
+            onClick={handleFilter}
+          >
+            <FaSearch className={styles.searchIcon} />
+            Search
+          </button>
+          <button className={styles.resetProperties} onClick={resetFilter}>
+            Reset Filter
+          </button>
+        </div>
+      </form>
     </div>
   );
 };

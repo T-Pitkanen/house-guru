@@ -33,10 +33,7 @@ const SearchBuild = () => {
   }, []);
 
   const handleFilter = () => {
-    
     setIsLoading(true);
-
-    
 
     const filtered = properties.filter(
       (property) =>
@@ -61,7 +58,7 @@ const SearchBuild = () => {
         maxPrice,
         minSize,
         maxSize,
-        location
+        location,
       }).toString();
       router.push(`/buy?${params}`);
     }, 1000);
@@ -73,7 +70,13 @@ const SearchBuild = () => {
 
   return (
     <div className={styles.searchContainer}>
-      <div className={styles.searchWrapper}>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleFilter();
+        }}
+        className={styles.searchWrapper}
+      >
         <div className={styles.buttonWrapper}>
           <button className={styles.searchButton}>Search Properties</button>
           <button className={styles.searchButton}>Search Brokers</button>
@@ -87,7 +90,7 @@ const SearchBuild = () => {
                 id="id"
                 name="search with id"
                 placeholder="Search with property ID"
-				onChange={event => setId(event.target.value)}
+                onChange={(event) => setId(event.target.value)}
               ></input>
             </div>
           </div>
@@ -99,7 +102,9 @@ const SearchBuild = () => {
                 id="address"
                 name="address"
                 placeholder="Type address"
-                onChange={(event) => setAddress(capitalizeFirstLetter(event.target.value))}
+                onChange={(event) =>
+                  setAddress(capitalizeFirstLetter(event.target.value))
+                }
               ></input>
             </div>
             <div className={styles.locationSearch}>
@@ -109,7 +114,9 @@ const SearchBuild = () => {
                 id="location"
                 name="location"
                 placeholder="Type location"
-                onChange={(event) => setLocation(capitalizeFirstLetter(event.target.value))}
+                onChange={(event) =>
+                  setLocation(capitalizeFirstLetter(event.target.value))
+                }
               ></input>
             </div>
             <div className={styles.typeSelect}>
@@ -132,7 +139,7 @@ const SearchBuild = () => {
                   id="price"
                   name="price"
                   placeholder="min"
-				  onChange={event => setMinPrice(event.target.value)}
+                  onChange={(event) => setMinPrice(event.target.value)}
                 ></input>
                 <p>000€</p>
                 <p>-</p>
@@ -142,7 +149,7 @@ const SearchBuild = () => {
                   id="price"
                   name="price"
                   placeholder="max"
-				  onChange={event => setMaxPrice(event.target.value)}
+                  onChange={(event) => setMaxPrice(event.target.value)}
                 ></input>
                 <p>000€</p>
               </div>
@@ -157,7 +164,7 @@ const SearchBuild = () => {
                   id="min"
                   name="min"
                   placeholder="min"
-				  onChange={event => setMinSize(event.target.value)}
+                  onChange={(event) => setMinSize(event.target.value)}
                 ></input>
                 <p>-</p>
                 <input
@@ -166,18 +173,18 @@ const SearchBuild = () => {
                   id="max"
                   name="max"
                   placeholder="max"
-				  onChange={event => setMaxSize(event.target.value)}
+                  onChange={(event) => setMaxSize(event.target.value)}
                 ></input>
                 <p>m²</p>
               </div>
             </div>
           </div>
         </div>
-        <button className={styles.searchProperties} onClick={handleFilter}>
+        <button type="submit" className={styles.searchProperties} onClick={handleFilter}>
           <FaSearch className={styles.searchIcon} />
           Search
         </button>
-      </div>
+      </form>
     </div>
   );
 };

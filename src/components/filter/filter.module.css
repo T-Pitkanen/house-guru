@@ -1,0 +1,118 @@
+.filterContainer{
+    border-top: solid 0.5px #c2c2c2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.filterContainer form{
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+    width: 90%;
+}
+
+
+.middleContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+}
+
+.selectWrapper{
+    width: 100%;
+}
+
+.middleContainer select {
+    color: #3d3d3d;
+    font-size: 13px;
+    width: 50%;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 0.5px solid #c2c2c2;
+    border-radius: 5px;
+}
+
+.middleContainer select :focus {
+    outline: none;
+    border: 0.5px solid #c2c2c2;
+    border-radius: 5px;
+}
+
+
+.middleContainer input{
+    color: #3d3d3d;
+    font-size: 14px;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 0.5px solid #c2c2c2;
+    border-radius: 5px;
+
+}
+
+.midSecond {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    width: 100%;
+}
+
+
+.midThird p{
+    color: #303030;
+    font-size: 14px;
+    padding-bottom: 1vh;
+   
+}
+
+.midThird{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+
+
+.priceContainer,
+.sizeContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    width: 95%;
+    margin-bottom: 2vh;
+}
+
+.price,
+.size {
+    display: flex;
+    color: black;
+    gap: 1rem;
+}
+
+.price input,
+.size input{
+    padding: 0 1rem;
+    width: 50%;
+}
+
+.buttons{
+    margin-top: 2vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons button{
+    background-color: var(--color-main-button);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    width: 45%;
+    color: rgb(231, 231, 231);
+
+}
+
