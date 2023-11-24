@@ -28,7 +28,6 @@ const Buy = () => {
   const [filteredProperties, setFilteredProperties] = useState([]); // New state variable for filtered properties
   const [hasFiltered, setHasFiltered] = useState(false); // New state variable for filter status
 
-
   /* ORIGINAL
   useEffect(() => {
     const type = searchParams.get("type");
@@ -69,7 +68,6 @@ const Buy = () => {
     fetchData();
   }, [searchParams]);  */
 
-
   useEffect(() => {
     const type = searchParams.get("type");
     const address = searchParams.get("address");
@@ -86,7 +84,10 @@ const Buy = () => {
       try {
         setIsLoading(true);
         const dataPromise = getPropertyData();
-        const [data] = await Promise.all([dataPromise, new Promise((resolve) => setTimeout(resolve, 2000))]);
+        const [data] = await Promise.all([
+          dataPromise,
+          new Promise((resolve) => setTimeout(resolve, 1000)),
+        ]);
         const filtered = data.filter((property) => {
           return (
             (!type || property.type === type) &&
@@ -141,6 +142,7 @@ const Buy = () => {
   // Handle pagination
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const totalPages = Math.ceil(
@@ -202,18 +204,32 @@ const Buy = () => {
     <div className={styles.buyPageWrapper}>
       <Filter properties={properties} onFilter={handleFilter} />
       {isLoading ? (
-        <Image src="/loader/1488.gif" alt="Loading..." width={50} height={50} />
+        <Image className = {styles.loader} src="/loader/1488.gif" alt="Loading..." width={50} height={50} />
       ) : (
         <>
-          {currentItems.map((property) => (
-            <Property key={property.id} property={property} />
-          ))}
-          <div>
+          <div className={styles.containerFound}>
+            {" "}
+            <p className={styles.foundProperties}>
+              Found Properties: (
+              <span className={styles.numberColor}>
+                {hasFiltered ? filteredProperties.length : properties.length}
+              </span>
+              )
+            </p>
+          </div>
+          <div className={styles.buyProperties}>
+            {currentItems.map((property) => (
+              <Property key={property.id} property={property} />
+            ))}
+            </div>
+            <div className={styles.pagination}>
             {[...Array(totalPages)].map((_, i) => (
               <button
                 key={i}
                 onClick={() => handlePageChange(i + 1)}
-                style={currentPage === i + 1 ? { backgroundColor: "gray" } : null}
+                style={
+                  currentPage === i + 1 ? {} : null
+                }
               >
                 {i + 1}
               </button>
