@@ -228,7 +228,7 @@ const Buy = () => {
                 key={i}
                 onClick={() => handlePageChange(i + 1)}
                 style={
-                  currentPage === i + 1 ? {} : null
+                  currentPage === i + 1 ? {backgroundColor: '#263864'} : null
                 }
               >
                 {i + 1}
@@ -242,3 +242,5 @@ const Buy = () => {
 };
 
 export default Buy;
+
+

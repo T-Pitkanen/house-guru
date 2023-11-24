@@ -11,6 +11,12 @@
     
 }
 
+.loader {
+    margin: 10vh;
+    width: 10vw;
+    height: auto;
+}
+
 .buyPageWrapper{
     margin-top: 13vh;
     display: flex;

@@ -1,6 +1,12 @@
 .footerImage {
     display: flex;
     justify-content: center;
+   
+}
+
+.footerImage img{
+    width: auto;
+    height: 12vh;
 }
 
 
@@ -13,7 +19,7 @@
 }
 
 .icons {
-    font-size: 23px;
+    font-size: 22px;
     display: flex;
     gap: 3rem;
     justify-content: space-between;
@@ -22,12 +28,13 @@
 
 
 .footerContainer {
+    border-top: 1px solid #c4c4c4;
     padding: 2rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #ebe0d1;
+    background-color: #e9e1d7;
     color: #5e5e5e;
     font-family: "Playfair Display";
     font-size: 15px;
@@ -55,7 +62,7 @@
 .footerBottom {
     display: flex;
     justify-content: space-evenly;
-    gap: 3rem;
+    gap: 4rem;
 
 }
 
@@ -70,6 +77,11 @@
     display: flex;
     flex-direction: column;
     line-height: 1.75;
+}
+
+.links p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
 }
 
 .links h4 {

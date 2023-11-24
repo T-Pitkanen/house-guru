@@ -174,7 +174,7 @@ export const getPropertyDataMock = async () => {
         image: "/properties/apartmen2-alrum.jpg",
     },
     {
-      id: "1232345673236",
+      id: "xd69696666",
       address: "1234 Elm Street",
       location: "Cityville",
       type: 'House',

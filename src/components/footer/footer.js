@@ -27,7 +27,6 @@ const footerData = {
 		{ label: 'Boligkøbet', link: '' },
 		{ label: 'Køberrådgiving', link: '' },
 	],
-	rent: [{ label: 'Rent', link: '' }],
 	blog: [
 		{ label: 'Salgsavurdering', link: '' },
 		{ label: 'Boligsælget', link: '' },
@@ -75,16 +74,16 @@ const FooterBuild = ({ footerData }) => {
 								</p>
 							))}
 						</div>{' '}
-						<div className={styles.links}>
-							<h4>RENT</h4>
-							{rent.map((item, index) => (
+					</div>
+					<div className={styles.linksSeparation}>
+					<div className={styles.links}>
+							<h4>BLOG</h4>
+							{blog.map((item, index) => (
 								<p key={index} style={{ height: '20px' }}>
 									<a href={item.link}>{item.label}</a>
 								</p>
 							))}
 						</div>
-					</div>
-					<div className={styles.linksSeparation}>
 						<div className={styles.links}>
 							<h4>ABOUT US</h4>
 							{aboutUs.map((item, index) => (
@@ -93,14 +92,7 @@ const FooterBuild = ({ footerData }) => {
 								</p>
 							))}
 						</div>
-						<div className={styles.links}>
-							<h4>BLOG</h4>
-							{blog.map((item, index) => (
-								<p key={index} style={{ height: '20px' }}>
-									<a href={item.link}>{item.label}</a>
-								</p>
-							))}
-						</div>
+						
 					</div>
 				</div>
 				<div className={styles.footerCopy}>{copy}</div>
