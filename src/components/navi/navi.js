@@ -67,7 +67,7 @@ const Logo = () => {
         alt="Logo"
         width={100} // Set the desired width
         height={75} // Set the desired height
-        style={{ position: "fixed" }}
+        style={{ position: "fixed", zIndex: "1000" }}
       />
     </a>
   );

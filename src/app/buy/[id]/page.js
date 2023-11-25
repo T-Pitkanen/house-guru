@@ -1,144 +1,151 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { getPropertyById, getPropertiesByTitle } from '@/services/properties.service';
-import Image from 'next/image';
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import styles from './page.module.css';
-import GoBackButton from '@/components/goBack/goBack';
+import React from "react";
+import {
+  getPropertyById,
+  getPropertiesByTitle,
+} from "@/services/properties.service";
+import Image from "next/image";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import styles from "./page.module.css";
+import GoBackButton from "@/components/goBack/goBack";
+
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+const Slider = ({ id }) => {
+  const router = useRouter();
+
+  //   const { id } = params;
+
+  //   console.log("id prop in PropertyPage component:", id);
+
+  const [property, setProperties] = useState({});
+
+  useEffect(() => {
+    console.log("Fetching data for id:", id);
+
+    getPropertyById(id)
+      .then((data) => {
+        console.log("data in PropertyPage component:", data);
+        if (data) {
+          const propertyData = {
+            address: data.address,
+            description: data.description,
+            images: data.images,
+            price: data.price,
+            square_meters: data.square_meters,
+            type: data.type,
+            bathrooms: data.bathrooms,
+            bedrooms: data.bedrooms,
+          };
+          setProperties(propertyData);
+        } else {
+          console.error(`No data returned for id: ${id}`);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching property:", error);
+      });
+  }, [id]);
+
+  return (
+    <div className={styles.carouselContainer}>
+      <Carousel
+        className={styles.crsl}
+        infiniteLoop
+        centerMode
+        showStatus={false}
+        centerSlidePercentage={100}
+        showIndicators={false}
+        showThumbs={false}
+      >
+        {property.images &&
+          property.images.map((image) => (
+            <div key={image.id}>
+              <img
+                className={styles.crslImg}
+                src={image.src}
+                alt={image.info}
+              />
+            </div>
+          ))}
+      </Carousel>
+    </div>
+  );
+};
 
 const PropertyPage = ({ params }) => {
+  const router = useRouter();
 
-	const router = useRouter();
-	
-	const { id } = params;
+  const { id } = params;
 
-	console.log('id prop in PropertyPage component:', id);
-	
-	const [property, setProperties] = useState({});
+  console.log("id prop in PropertyPage component:", id);
 
-	useEffect(() => {
-		getPropertyById(id).then((data) => {
-			console.log('data in PropertyPage component:', data);
-		  if (data) {
-			const propertyData = {
-			  address: data.address,
-			  description: data.description,
-			  image: data.image,
-			  price: data.price,
-			  square_meters: data.square_meters,
-			  type: data.type,
-			  bathrooms: data.bathrooms,
-			  bedrooms: data.bedrooms,
-			};
-			setProperties(propertyData);
-		  } else {
-			console.error(`No data returned for id: ${id}`);
-		  }
-		});
-	  }, [id]);
+  const [property, setProperties] = useState({});
 
-	return (
-		<div className={styles.postContainer}>
-			{property.address ? (
-				<div className={styles.postWrapper}>
-					<div className={styles.headerWrapper}>
-						<h1>{property.address}</h1>
-					</div>
-					<div className={styles.contentWrapper}>
-						<div className={styles.content}>
-							<div>{property.description}</div>
-							<Image
-								src={property.image}
-								alt={property.address}
-								width={300}
-								height={300}
-							/>{' '}
-							{property.propertyData.map((data, index) => (
-								<React.Fragment key={index}>
-									<div className={styles.postTitle}>{data.address}</div>
-									<div className={styles.contentOne}>{data.description}</div>
-								</React.Fragment>
-							))}
-						</div>
-					</div>
-				</div>
-			) : (
-				<p>Loading...</p>
-			)}
-			<GoBackButton className={styles.goBackButton} />
-		</div>
-	);
+  useEffect(() => {
+    console.log("Fetching property for id:", id);
+
+    getPropertyById(id)
+      .then((data) => {
+        console.log("data in PropertyPage component:", data);
+        if (data) {
+          const propertyData = {
+            address: data.address,
+            description: data.description,
+            image: data.image,
+            price: data.price,
+            location: data.location,
+            square_meters: data.square_meters,
+            type: data.type,
+            bathrooms: data.bathrooms,
+            bedrooms: data.bedrooms,
+          };
+          setProperties(propertyData);
+        } else {
+          console.error(`No data returned for id: ${id}`);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching property:", error);
+      });
+  }, [id]);
+
+  return (
+    <div className={styles.propertyContainer}>
+      {property.address ? (
+        <div className={styles.propertyWrapper}>
+          <div className={styles.headerWrapper}>
+            <Slider id={id} />
+            <div className={styles.address}>
+              {" "}
+              <h1>{property.address},</h1>
+              <h1>{property.location}</h1>
+            </div>
+            <div className={styles.descNprice}>
+              <div className={styles.description}>{property.description}</div>
+              <div className={styles.price}>{property.price} €</div>
+            </div>
+          </div>
+          <div className={styles.contentWrapper}>
+            <div className={styles.content}>
+              {/* <Image
+                src={property.image}
+                alt={property.address}
+                width={300}
+                height={300}
+              /> */}
+            </div>
+          </div>
+        </div>
+      ) : (
+        <p>Loading...</p>
+      )}
+      <GoBackButton className={styles.goBackButton} />
+    </div>
+  );
 };
 
 export default PropertyPage;
-
-//OLD CODE HERE
-// 'use client';
-
-// import { getPostById, getPostByTitle } from '@/services/data.service';
-// import Image from 'next/image';
-// import { useState, useEffect } from 'react';
-// import styles from './page.module.css';
-
-// const PostPage = ({ params }) => {
-// 	const { id } = params;
-
-// 	console.log(params);
-
-// 	const [post, setPost] = useState({});
-
-// 	useEffect(() => {
-// 		getPostById(id).then((data) => {
-// 			console.log(data);
-// 			setPost(data);
-// 		});
-// 	}, [id]);
-
-// 	return (
-// 		<div className={styles.postContainer}>
-// 			{post.title ? (
-// 				<>
-// 					<div className={styles.postWrapper}>
-// 						<div className={styles.headerWrapper}>
-// 							{' '}
-// 							<h1>{post.title}</h1>
-// 						</div>
-// 						<div className={styles.contentWrapper}>
-// 							<div className={styles.content}>
-// 								<div>{post.content}</div>
-// 								<Image
-// 									src={post.image}
-// 									alt={post.title}
-// 									width={300}
-// 									height={300}
-// 								/>
-// 								<div className={styles.postTitle}>{post.title}</div>
-// 								<div>{post.content_1}</div>
-// 								<div className={styles.postTitle}>{post.title_2}</div>
-// 								<div>{post.content_2}</div>
-// 								<div className={styles.postTitle}>{post.title_3}</div>
-// 								<div>{post.content_3}</div>
-// 								<Image
-// 									src={post.image}
-// 									alt={post.title}
-// 									width={300}
-// 									height={300}
-// 								/>
-// 								<div className={styles.postTitle}>{post.title_4}</div>
-// 								<div>{post.content_4}</div>
-// 								<div className={styles.postTitle}>{post.title_5}</div>
-// 								<div>{post.content_5}</div>
-// 							</div>
-// 						</div>
-// 					</div>
-// 				</>
-// 			) : (
-// 				<p>Loading...</p>
-// 			)}
-// 		</div>
-// 	);
-// };
-
-// export default PostPage;
