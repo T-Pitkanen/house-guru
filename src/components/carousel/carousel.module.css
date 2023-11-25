@@ -18,10 +18,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 5vh;
   
 }
 
+
+.carouselContainer hr.carouselHr{
+  width:30%;
+  margin:0 auto;
+  margin-bottom: 5vh;
+  margin-top: 1vh;
+}
 
 .crsl {
     width: 50%;

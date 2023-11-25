@@ -20,6 +20,7 @@ const PropertyPage = ({ params }) => {
 
 	useEffect(() => {
 		getPropertyById(id).then((data) => {
+			console.log('data in PropertyPage component:', data);
 		  if (data) {
 			const propertyData = {
 			  address: data.address,

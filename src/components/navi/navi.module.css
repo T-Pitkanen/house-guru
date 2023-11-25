@@ -3,6 +3,11 @@
 
 }
 
+.insideImage{
+  width: 20px;
+}
+
+
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: fixed;
@@ -58,14 +63,18 @@
 .bm-item-list {
   color: #292929;
   padding: 0.8em;
+  text-decoration: underline;
 }
 
 /* Individual item */
 .bm-item {
   display: inline-block;
+  margin-left: 3vw;
 }
 
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.733);
 }
+
+

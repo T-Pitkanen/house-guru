@@ -27,6 +27,7 @@ const Slider = () => {
   return (
     <div className={styles.carouselContainer}>
       <h2>Featuring</h2>
+      <hr className={styles.carouselHr}/>
       <Carousel
         className={styles.crsl}
         infiniteLoop

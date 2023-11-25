@@ -11,7 +11,7 @@
 .filterContainer form{
     margin-top: 2vh;
     margin-bottom: 5vh;
-    width: 90%;
+    width: 85%;
 }
 
 
@@ -87,7 +87,7 @@
     flex-direction: column;
     justify-content: center;
     align-self: center;
-    width: 95%;
+    width: 100%;
     margin-bottom: 2vh;
 }
 
@@ -108,16 +108,17 @@
     margin-top: 2vh;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .buttons button{
     background-color: var(--color-main-button);
     border: none;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1rem;
     border-radius: 5px;
     width: 45%;
     color: rgb(231, 231, 231);
+    font-size: 13px;
 
 }
 

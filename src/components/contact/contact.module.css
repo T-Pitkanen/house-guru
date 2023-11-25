@@ -1,32 +1,103 @@
 .formWrapper {
-  width: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10vh;
+}
+
+.formHeader{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #777777;
+  gap: 0.75rem;
+  margin-bottom: 5vh;
+}
+
+.formHeader hr {
+  width: 50%;
+}
+
+.formHeader h2{
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  font-weight: 500;
+  color: #666666;
+}
+
+.formHeader p {
+  font-size: 13px;
+  padding: 0 3rem;
+  text-align: center;
 }
 
 .form {
+  width: 90%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
+  padding: 2rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .form input[type="text"],
 .form input[type="email"],
-.form input[type="tel"] {
+.form input[type="tel"],
+.form textarea {
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
-  background-color: #fafafa;
+  background-color: #ffffff;
+  width: 80%;
+  color: #1a1a1a;
+  font-size: 15px;
+  resize: none;
+  font-family: inherit;
 }
+
 
 .form input[type="submit"] {
   background-color: var(--color-main-button);
   border: none;
   color: white;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
+  margin-top: 3vh;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
-  width: 50%;
+  width: 40%;
+}
+
+.backgroundImage {
+
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+
+  width: 100%;
+  height: 65vh;
+
+  filter: blur(2px);
+
+}
+
+.backgroundImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contactInfo {
+color: #303030;
+margin-bottom: 10vh;
 }
