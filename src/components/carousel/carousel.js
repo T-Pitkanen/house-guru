@@ -35,6 +35,7 @@ const Slider = () => {
         showStatus={false}
         centerSlidePercentage={100}
         showIndicators={false}
+        swipeable={false}
       >
         {images.map((image) => (
           <div key={image.id}>

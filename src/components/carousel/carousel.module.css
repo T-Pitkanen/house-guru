@@ -1,16 +1,14 @@
-
-.carouselContainer hr{
+.carouselContainer hr {
   width: 80%;
 }
 
-.carouselContainer{
+.carouselContainer {
   background-color: #e7e7e7;
   padding: 1.75rem 0;
 }
 
-
-.carouselContainer h2{
-  font-family: 'Playfair Display';
+.carouselContainer h2 {
+  font-family: "Playfair Display";
   font-weight: 500;
   font-size: 30px;
   color: var(--color-header);
@@ -18,57 +16,59 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 }
 
-
-.carouselContainer hr.carouselHr{
-  width:30%;
-  margin:0 auto;
+.carouselContainer hr.carouselHr {
+  width: 30%;
+  margin: 0 auto;
   margin-bottom: 5vh;
   margin-top: 1vh;
 }
 
 .crsl {
   background-color: #f5f5f5;
-    width: 50%;
-    margin: auto;
-    border: 1px solid #c2c2c2;
-    border-radius: 5px;
-  }
+  width: 50%;
+  margin: auto;
+  border: 1px solid #c2c2c2;
+  border-radius: 5px;
+}
 
-  .crslImg{
-    width: 100%;
-  }
+.crslImg {
+  width: 100%;
+}
 
-  .legend{
-    color: var(--color-context);
-    padding-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-  }
+.legend {
+  color: var(--color-context);
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
 
-  .legend h3{
-    font-size: 20px;
-    font-family: "Playfair Display";
-    font-weight: 400;
-    color: var(--color-header);
-  }
+.legend h3 {
+  font-size: 20px;
+  font-family: "Playfair Display";
+  font-weight: 400;
+  color: var(--color-header);
+}
 
-  .legend p {
-    font-size: 13px;
-    width: 80%;
-  }
+.legend p {
+  font-size: 13px;
+  width: 80%;
+}
 
-  .legend button{
-    margin: 2vh 0;
-    background-color: var(--color-main-button);
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    width: 40%;
-    color: rgb(231, 231, 231);
+.legend button {
+  margin: 2vh 0;
+  background-color: var(--color-main-button);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  width: 40%;
+  color: rgb(231, 231, 231);
+}
+
+.carousel.carousel-slider .control-arrow{
+  color: black;
 }
