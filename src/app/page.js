@@ -15,7 +15,7 @@ export default function Home() {
         if (window.innerWidth > 1024) {
           alert("Use your fkn PHONE TY!!!!!!");
         } else {
-          alert("Hello :3 Thanks for using phone.");
+          alert("HOWDY!");
         }
         localStorage.setItem("alertShown", "true");
       }
