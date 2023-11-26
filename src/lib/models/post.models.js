@@ -1,13 +1,13 @@
-import mongoose from "mongoose"; 
+// import mongoose from "mongoose"; 
 
-mongoose.set('runValidators', true);
+// mongoose.set('runValidators', true);
 
-const postSchema = new mongoose.Schema({
-    title: {type: String},
-    subtitle: {type: String},
-    image: {type: String, default:"/products/dummy.jpg"}
-},{
-    strict: true
-})
+// const postSchema = new mongoose.Schema({
+//     title: {type: String},
+//     subtitle: {type: String},
+//     image: {type: String, default:"/products/dummy.jpg"}
+// },{
+//     strict: true
+// })
 
-export default mongoose.models.post || mongoose.model('post', postSchema);
+// export default mongoose.models.post || mongoose.model('post', postSchema);
