@@ -35,8 +35,8 @@ var styles = {
     height: "100%",
   },
   bmMenu: {
-    background: "#e7e3de",
-    padding: "0em 0.5em 0",
+    background: "#f5f4f3",
+    // padding: "0em 0.5em 0",
     fontSize: "1.15em",
   },
   bmMorphShape: {
@@ -44,7 +44,7 @@ var styles = {
   },
   bmItemList: {
     color: "#292929",
-    padding: "0.5em",
+    paddingTop: "0.5em",
     display: "flex",
     flexDirection: "column",
     gap: "1rem",
@@ -54,6 +54,9 @@ var styles = {
     display: "inline-block",
     marginLeft: "1.75rem",
     marginTop: "1rem",
+    paddingBottom: "0.5rem",
+    borderBottom: "1px solid #858585",
+    width: "100%",
   },
   bmOverlay: {
     background: "rgba(0, 0, 0, 0.8)",

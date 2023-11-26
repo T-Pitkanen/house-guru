@@ -22,19 +22,18 @@
     gap: 1rem;
     padding-top: 1rem;
     line-height: 1.75;
-    letter-spacing: 0.75px;
+    /* letter-spacing: 0.75px; */
 }
 
 .cardContainer h2 {
-
     font-family: 'Playfair Display';
     font-weight: 500;
-    font-size: 22px;
+    font-size: 25px;
 }
 
 .cardContainer p {
 
-    font-size: 13px;
+    font-size: 15px;
     text-align: center;
     padding: 0 1rem;
 }
@@ -55,6 +54,8 @@
     color: rgb(231, 231, 231);
     font-weight: 500;
     margin-bottom: 0.75rem;
+    margin-top: 0.75rem;
+    font-size: 15px;
 }
 
 @media (min-width:1280px) and (max-width:1600px) {
