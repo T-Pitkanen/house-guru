@@ -4,6 +4,16 @@
   width: 20px;
 }
 
+.navVisible {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.navHidden {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
 
 /* Position and sizing of burger button */
 .bm-burger-button {

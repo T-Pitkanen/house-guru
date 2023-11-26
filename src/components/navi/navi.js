@@ -5,6 +5,7 @@ import { slide as Menu } from "react-burger-menu";
 import { poppins } from "@/utils/fonts";
 import Image from "next/image";
 import Link from "next/link";
+import style from "./navi.module.css";
 
 var styles = {
   bmBurgerButton: {
@@ -57,7 +58,15 @@ var styles = {
   bmOverlay: {
     background: "rgba(0, 0, 0, 0.8)",
   },
-};
+  navHidden: {
+    opacity: "0",
+    transition: "opacity 0.5s ease-in-out",
+  },
+  navVisible: {
+    opacity: "1",
+    transition: "opacity 0.5s ease-in-out",
+  }
+}; 
 
 const Logo = () => {
   return (
@@ -91,6 +100,9 @@ const LogoInside = () => {
 };
 
 const MenuBuild = ({ isOpen, onStateChange }) => {
+
+  
+
   return (
     <Menu
       right
@@ -121,6 +133,8 @@ const MenuBuild = ({ isOpen, onStateChange }) => {
 };
 
 const HamburgerMenu = () => {
+
+  const [isVisible, setIsVisible] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -138,8 +152,27 @@ const HamburgerMenu = () => {
     };
   }, []);
 
+  useEffect(() => {
+    let lastScrollTop = 0;
+  
+    const handleScroll = () => {
+      let st = window.pageYOffset || document.documentElement.scrollTop;
+      if (st > lastScrollTop) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+      lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+    };
+  
+    window.addEventListener("scroll", handleScroll, false);
+    return () => {
+      window.removeEventListener("scroll", handleScroll, false);
+    };
+  }, []);
+
   return (
-    <div>
+    <div className={isVisible ? style.navVisible : style.navHidden}>
       <Logo />
       {windowWidth < 420 && (
         <MenuBuild
