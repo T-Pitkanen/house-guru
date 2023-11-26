@@ -10,13 +10,13 @@ import style from "./navi.module.css";
 var styles = {
   bmBurgerButton: {
     position: "fixed",
-    width: "1rem",
-    height: "1rem",
+    width: "1.25rem",
+    height: "1.25rem",
     marginLeft: "21rem",
     marginTop: "1.5rem",
   },
   bmBurgerBars: {
-    background: "#888888",
+    background: "#4b4b4b",
   },
   bmBurgerBarsHover: {
     background: "#a90000",
@@ -70,6 +70,8 @@ var styles = {
     transition: "opacity 0.5s ease-in-out",
   }
 }; 
+
+
 
 const Logo = () => {
   return (

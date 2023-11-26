@@ -6,6 +6,7 @@ import { FaSearch } from "react-icons/fa";
 import styles from "./filter.module.css";
 import { useRouter } from "next/navigation";
 
+
 const FilterBuild = () => {
   const router = useRouter();
   const [properties, setProperties] = useState([]);
@@ -19,6 +20,8 @@ const FilterBuild = () => {
   const [minSize, setMinSize] = useState("");
   const [maxSize, setMaxSize] = useState("");
   const [location, setLocation] = useState("");
+
+
 
   useEffect(() => {
     const fetchData = async () => {
@@ -48,6 +51,7 @@ const FilterBuild = () => {
   const handleFilter = () => {
     console.log("Filtering properties with type:", type);
     setIsLoading(true);
+   
 
     const filtered = properties.filter(
       (property) =>
@@ -66,6 +70,7 @@ const FilterBuild = () => {
       console.log("Filtered properties:", filtered);
 
       setFilteredProperties(filtered);
+     
 
       // setHasFiltered(true); //added 21:53
 
@@ -217,7 +222,10 @@ const FilterBuild = () => {
   );
 };
 
-const Filter = () => {
+const Filter = ({ properties, onFilter, resetPagination }) => {
+
+  resetPagination();
+  
   return (
     <>
       <FilterBuild />

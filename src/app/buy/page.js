@@ -20,6 +20,9 @@ const Buy = () => {
   // Pagination
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
+  const resetPagination = () => {
+    setCurrentPage(1);
+  };
 
   // console.log("Rendering BuyPage");
 
@@ -135,6 +138,7 @@ const Buy = () => {
         (!id || property.id === id)
       );
     });
+    
     setFilteredProperties(filtered);
     setHasFiltered(true);
   };
@@ -202,7 +206,7 @@ const Buy = () => {
 
   return (
     <div className={styles.buyPageWrapper}>
-      <Filter properties={properties} onFilter={handleFilter} />
+      <Filter properties={properties} onFilter={handleFilter} resetPagination={resetPagination} />
       {isLoading ? (
         <Image className = {styles.loader} src="/loader/1488.gif" alt="Loading..." width={50} height={50} />
       ) : (

@@ -50,6 +50,14 @@ export const getPropertyDataMock = async () => {
         { id: "6", src: "/properties/house-dining.jpg" },
         { id: "7", src: "/properties/house-dining.jpg" },
       ],
+      info: [
+        'A detached house completed in 2014 in Cityville in a residential area popular with families with children. Good and functional floor plan, high space in the living room, which brings space.',
+        'The kitchen has carefully thought-out home appliance solutions, and the spare fireplace located between the living room and the kitchen brings comfortable warmth to a large area. The apartments water-circulating floor heating is comfortable for the feet and is heated by an exhaust air heat pump.',
+        'There is an exit from the utility room to a large L-shaped sunny terrace. There is a jacuzzi on the terrace, which the current residents have kept ready for use and warm all year round. The yard area is really cozy and the bushes and plantings have already grown well.',
+        'This home is worth seeing on the spot. Please contact the broker immediately!',
+      ]
+
+      
     },
     {
       id: "123456786",

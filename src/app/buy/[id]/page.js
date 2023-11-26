@@ -6,11 +6,11 @@ import {
   getPropertiesByTitle,
 } from "@/services/properties.service";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 import GoBackButton from "@/components/goBack/goBack";
-
+import Accordion from "@/components/accordion/accordion";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -78,8 +78,9 @@ const Slider = ({ id }) => {
 
 const PropertyPage = ({ params }) => {
   const router = useRouter();
-
+  const [isVisible, setIsVisible] = useState(false);
   const { id } = params;
+  const lastScrollTop = useRef(0);
 
   console.log("id prop in PropertyPage component:", id);
 
@@ -102,6 +103,7 @@ const PropertyPage = ({ params }) => {
             type: data.type,
             bathrooms: data.bathrooms,
             bedrooms: data.bedrooms,
+            info: data.info,
           };
           setProperties(propertyData);
         } else {
@@ -113,38 +115,105 @@ const PropertyPage = ({ params }) => {
       });
   }, [id]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      let st = window.pageYOffset || document.documentElement.scrollTop;
+      if (st > lastScrollTop.current) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+      lastScrollTop.current = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+    };
+
+    window.addEventListener("scroll", handleScroll, false);
+    return () => {
+      window.removeEventListener("scroll", handleScroll, false);
+    };
+  }, []);
+
   return (
-    <div className={styles.propertyContainer}>
-      {property.address ? (
-        <div className={styles.propertyWrapper}>
-          <div className={styles.headerWrapper}>
-            <Slider id={id} />
-            <div className={styles.address}>
-              {" "}
-              <h1>{property.address},</h1>
-              <h1>{property.location}</h1>
+    <>
+      <div className={isVisible ? styles.infoVisible : styles.infoHidden}>
+        <p>
+          {property.address}, {property.location}
+        </p>
+        <p className={styles.infoPrice}>{property.price}€</p>
+        {/* Rest of your component */}
+      </div>
+
+      <div className={styles.propertyContainer}>
+        {property.address ? (
+          <div className={styles.propertyWrapper}>
+            <div className={styles.headerWrapper}>
+              <Slider id={id} />
+              <div className={styles.address}>
+                {" "}
+                <h1>{property.address},</h1>
+                <h1>{property.location}</h1>
+              </div>
+              <div className={styles.descNprice}>
+                <div className={styles.description}>{property.description}</div>
+                <div className={styles.price}>{property.price} €</div>
+              </div>
             </div>
-            <div className={styles.descNprice}>
-              <div className={styles.description}>{property.description}</div>
-              <div className={styles.price}>{property.price} €</div>
-            </div>
-          </div>
-          <div className={styles.contentWrapper}>
-            <div className={styles.content}>
-              {/* <Image
+            <div className={styles.contentWrapper}>
+              <div className={styles.content}>
+                {/* <Image
                 src={property.image}
                 alt={property.address}
                 width={300}
                 height={300}
               /> */}
+                {property.info &&
+                  property.info.map((paragraph, id) => (
+                    <p key={id}>{paragraph}</p>
+                  ))}
+              </div>
             </div>
+            <div className={styles.contactProperty}>
+              <div className={styles.contactPropertyDetails}>
+                <h2>Interested?</h2>
+                <p>(+45) 12 34 56 </p>
+                <p>contact@houseguru.com</p> <p>OR</p>
+              </div>
+              <form>
+                <input type="text" name="name" placeholder="Name:" />
+                <input type="tel" name="phone" placeholder="Phone:" />
+                <input type="email" name="email" placeholder="Email:" />
+                <textarea name="message" placeholder="Message..."></textarea>
+                <input type="submit" value="Submit" />
+              </form>
+            </div>
+            <div className={styles.accordion}>
+              <Accordion title="Property information">
+                <div className={styles.accChildren}>
+                  <p className={styles.accTitle}>Content</p> <p> {property.address} </p>
+                </div>
+                <div className={styles.accChildren}>
+                  <p className={styles.accTitle}>Content </p> <p> {property.location} </p>
+                </div>
+                <div className={styles.accChildren}>
+                  <p className={styles.accTitle}>Content </p> <p> {property.square_meters} </p>
+                </div>
+              </Accordion>
+              <Accordion title="Plot">
+                <p>Content for Section 2</p>
+              </Accordion>
+              <Accordion title="Equipment">
+                <p>Content for Section 2</p>
+              </Accordion>
+              <Accordion title="Price and housing costs">
+                <p>Content for Section 2</p>
+              </Accordion>
+            </div>
+            <GoBackButton className={styles.goBackButton} />
           </div>
-        </div>
-      ) : (
-        <p>Loading...</p>
-      )}
-      <GoBackButton className={styles.goBackButton} />
-    </div>
+        ) : (
+          <p>Loading...</p>
+        )}
+      </div>
+    </>
   );
 };
 

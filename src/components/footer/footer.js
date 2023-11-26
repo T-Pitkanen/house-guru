@@ -1,8 +1,11 @@
+"use client";
 import Image from "next/image";
 import styles from "./footer.module.css";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import { FaArrowUp } from "react-icons/fa";
+
 
 const Logo = () => {
   return (
@@ -16,6 +19,19 @@ const Logo = () => {
     </a>
   );
 };
+
+function BackToTopButton() {
+  const scrollToTop = () => {
+    if (typeof window !== "undefined") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  return <button className={styles.topButton} onClick={scrollToTop}> <FaArrowUp /> Top</button>;
+}
 
 const footerData = {
   sell: [
@@ -51,7 +67,11 @@ const FooterBuild = ({ footerData }) => {
     <div className={styles.footerContainer}>
       <div className={styles.footerWrapper}>
         <div className={styles.footerTop}>
-          <Logo />
+          <div className={styles.logoNbutton}>
+            <Logo />
+            <BackToTopButton />
+          </div>
+
           <div className={styles.icons}>
             <FaInstagram />
             <FaFacebookF />

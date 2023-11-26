@@ -21,13 +21,13 @@
 
 .formHeader h2{
   font-family: 'Playfair Display', serif;
-  font-size: 25px;
+  font-size: 28px;
   font-weight: 500;
   color: #666666;
 }
 
 .formHeader p {
-  font-size: 13px;
+  font-size: 15px;
   padding: 0 3rem;
   text-align: center;
 }

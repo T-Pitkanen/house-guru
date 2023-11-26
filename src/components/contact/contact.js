@@ -42,28 +42,28 @@ const ContactForm = () => {
         </div>{" "}
         <input
           type="text"
-          placeholder="First name"
+          placeholder="First name*"
           {...register("First name", { required: true, maxLength: 80 })}
         />
         <input
           type="text"
-          placeholder="Last name"
+          placeholder="Last name*"
           {...register("Last name", { required: true, maxLength: 100 })}
         />
         <input
           type="email"
-          placeholder="Email"
+          placeholder="Email*"
           {...register("Email", { required: true })}
         />
         <input
           type="tel"
-          placeholder="Number"
+          placeholder="Number*"
           {...register("Number", { required: true })}
         />
         <textarea
           rows="4"
           className={styles.message}
-          placeholder="Your Message..."
+          placeholder="Your Message...*"
           {...register("Your Message...", { required: true, max: 250 })}
         />
         <input type="submit" />
