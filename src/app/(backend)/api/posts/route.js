@@ -7,7 +7,7 @@ export async function GET() {
 
     await dbConnect();
 
-    return postModels.find({}).then( (doc) => {
+    return postModel.find({}).then( (doc) => {
 
         return NextResponse.json(doc)
 
