@@ -195,6 +195,7 @@ const SearchBuild = () => {
 const Background = () => {
   return (
     <div className={styles.backgroundImage}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
       <img src="background.jpg" alt="Background" />
     </div>
   );

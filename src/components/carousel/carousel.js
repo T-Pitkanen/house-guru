@@ -38,6 +38,7 @@ const Slider = () => {
       >
         {images.map((image) => (
           <div key={image.id}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img className={styles.crslImg} src={image.src} alt={image.info} />
             <div className={styles.legend}>
               <h3>{image.address}</h3>

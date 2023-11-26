@@ -64,10 +64,13 @@ const Slider = ({ id }) => {
         {property.images &&
           property.images.map((image) => (
             <div key={image.id}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 className={styles.crslImg}
                 src={image.src}
                 alt={image.info}
+                layout="fill"
+                objectFit="cover"
               />
             </div>
           ))}

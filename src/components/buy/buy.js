@@ -33,7 +33,7 @@ const Buy = () => {
     };
 
     fetchData();
-  }, [router.isReady]);
+  });
 
   return (
     <div>
