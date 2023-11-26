@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useAppRouter } from 'next/navigation';
-import Image from "next/image";
+// import Image from "next/image";
 import styles from "./buy.module.css";
 import Properties from "@/components/properties/properties";
 import Property from "@/components/property/property";
