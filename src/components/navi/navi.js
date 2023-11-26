@@ -139,9 +139,14 @@ const MenuBuild = ({ isOpen, onStateChange }) => {
 
 const HamburgerMenu = () => {
 
+  
+
   const [isVisible, setIsVisible] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  // const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(
+    typeof window !== 'undefined' ? window.innerWidth : 0
+  );
 
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
@@ -151,10 +156,13 @@ const HamburgerMenu = () => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+  
+    if (typeof window !== 'undefined') {
+      window.addEventListener("resize", handleResize);
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
   }, []);
 
   useEffect(() => {
