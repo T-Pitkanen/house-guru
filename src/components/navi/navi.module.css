@@ -1,6 +1,4 @@
-
-
-.insideImage{
+.insideImage {
   width: 20px;
 }
 
@@ -26,7 +24,7 @@
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #4b4b4b;
+  background: #a0a0a0;
 }
 
 /* Color/shape of burger icon bars on hover*/
@@ -84,5 +82,3 @@
 .bm-overlay {
   background: rgba(0, 0, 0, 0.733);
 }
-
-
