@@ -3,6 +3,31 @@
 import Image from 'next/image';
 import styles from './page.module.css';
 
+const brokers = [
+	{
+		name: 'Firstname Lastname',
+		email: 'email@example.com',
+		phone: '123-456-7890',
+		education: "Bachelor's Degree",
+		image: '/meet-agents.jpg',
+	},
+	{
+		name: 'Firstname Lastname',
+		email: 'email@example.com',
+		phone: '123-456-7890',
+		education: "Bachelor's Degree",
+		image: '/selling.jpg',
+	},
+	{
+		name: 'Firstname Lastname',
+		email: 'email@example.com',
+		phone: '123-456-7890',
+		education: "Bachelor's Degree",
+		image: '/background.jpg',
+	},
+	// Add more broker objects here...
+];
+
 const Background = () => {
 	return (
 		<div className={styles.backgroundImage}>
@@ -37,15 +62,22 @@ const AboutPage = () => {
 					</div>
 					<div className={styles.brokers}>
 						<h2>Meet Our Brokers</h2>
-						<div className={styles.brokersWrapper}>
-							<Image src="/blogs.jpg" alt="broker1" width={300} height={300} />
-							<div className={styles.brokerInfo}>
-								<p>Firstname Lastname</p>
-								<p>Email</p>
-								<p>Phone</p>
-								<p>Education</p>
+						{brokers.map((broker, index) => (
+							<div key={index} className={styles.brokersWrapper}>
+								<Image
+									src={broker.image}
+									alt={broker.name}
+									width={300}
+									height={300}
+								/>
+								<div className={styles.brokerInfo}>
+									<p>{broker.name}</p>
+									<p>{broker.email}</p>
+									<p>{broker.phone}</p>
+									<p>{broker.education}</p>
+								</div>
 							</div>
-						</div>
+						))}
 					</div>
 					{/* <div className={styles.aboutBody}>
 						<h2>Our Mission</h2>
