@@ -1,22 +1,22 @@
 .footerImage {
     display: flex;
     justify-content: center;
-   
+
 }
 
-.footerImage img{
+.footerImage img {
     width: auto;
     height: 12vh;
 }
 
-.logoNbutton{
+.logoNbutton {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
 }
 
-.topButton{
+.topButton {
     color: white;
     font-size: 13px;
     height: 5vh;
@@ -65,7 +65,7 @@
 }
 
 .footerWrapper {
-   
+
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -102,7 +102,7 @@
     gap: 0.25rem;
 }
 
-.links p{
+.links p {
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     margin-bottom: 1vh;
@@ -117,7 +117,7 @@
     text-align: center;
 }
 
-.footerAddress{
+.footerAddress {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -136,6 +136,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 3vh;
+    text-align: center;
 }
 
 @media (min-width:640px) and (max-width:1024px) {
@@ -178,7 +179,7 @@
 
     .footerTop {
         justify-content: space-around;
-        gap: 9rem;
+        gap: 5rem;
     }
 
     .icons {
@@ -187,40 +188,81 @@
 
     }
 
+    .footerImage img {
+        width: auto;
+        height: 9vh;
+    }
+
+    .icons {
+        font-size: 35px;
+
+    }
+
+    .footerBottom {
+
+        margin-top: 4vh;
+    }
+
 }
 
 
 @media (min-width:1280px) and (max-width:1600px) {
 
+    .footerImage img {
+        width: auto;
+        height: 13vh;
+    }
+
     .footerWrapper {
-        gap: 4rem;
+        gap: 2rem;
     }
 
 
     .footerTop {
         width: 60%;
-        gap: 10rem;
-        justify-content: start;
+        gap: 5rem;
+        flex-direction: row;
+        justify-content: space-evenly;
     }
 
     .linksSeparation {
-        gap: 3rem;
+        gap: 5rem;
         flex-direction: row;
     }
 
 
     .icons {
         font-size: 30px;
-        gap: 3rem;
+        gap: 4rem;
 
     }
+
+    .footerWrapper {}
 
     .footerBottom {
         width: 80%;
 
+        justify-content: center;
     }
 
     .links {
         gap: 1rem;
+    }
+
+    .topButton {
+        color: white;
+        font-size: 13px;
+        height: 5vh;
+        width: 5vw;
+        background-color: var(--color-main-button);
+        justify-content: center;
+    }
+
+    .footerLinks {
+        gap: 0;
+    }
+
+    .footerAddress {
+        margin-top: 5vh;
     }
 }

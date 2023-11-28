@@ -31,7 +31,7 @@
 
 .searchWrapper {
   border: 1px solid #acacac;
-  width: 95vw;
+  width: 90%;
   height: auto;
   background-color: rgb(255, 255, 255);
 }
@@ -186,21 +186,33 @@
   padding: 1rem 0;
 }
 
+@media only screen and (min-width:400px) and (max-width:480px) {}
+
+/* @media only screen and (min-width:480px) and (max-width:640px) {} */
+
+
+@media only screen and (min-width:1600px) {}
+
 @media (min-width: 640px) and (max-width: 1024px) {
   .searchWrapper {
-    width: 70vw;
+    width: 70%;
+  }
+
+  .backgroundImage {
+
+    height: 65vh;
   }
 }
 
 @media (min-width: 1024px) and (max-width: 1280px) {
   .searchWrapper {
-    width: 80vw;
+    width: 60%;
   }
 }
 
 @media (min-width: 1280px) and (max-width: 1600px) {
   .searchWrapper {
-    width: 75%;
+    width: 60%;
   }
 
   .midThird {

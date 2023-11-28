@@ -181,12 +181,14 @@ const HamburgerMenu = () => {
 
 	return (
 		<div className={isVisible ? style.navVisible : style.navHidden}>
-			<Logo />
-			{windowWidth < 470 && (
-				<MenuBuild
-					isOpen={menuOpen}
-					onStateChange={({ isOpen }) => setMenuOpen(isOpen)}
-				/>
+			{windowWidth < 460 && (
+				<>
+					<Logo />
+					<MenuBuild
+						isOpen={menuOpen}
+						onStateChange={({ isOpen }) => setMenuOpen(isOpen)}
+					/>
+				</>
 			)}
 		</div>
 	);
