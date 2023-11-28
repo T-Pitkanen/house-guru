@@ -3,7 +3,7 @@ import styles from "./infoCard.module.css";
 
 const infoData = [
   {
-    title: "Get property price estimate and much more!",
+    title: "Get property price estimate",
     content:
       "By inviting our broker to your home, you will get an estimate of the value of your apartment and hear how it should be marketed.",
     button: "Read More",

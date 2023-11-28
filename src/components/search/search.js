@@ -78,54 +78,58 @@ const SearchBuild = () => {
         className={styles.searchWrapper}
       >
         <div className={styles.middleContainer}>
-          <div className={styles.midFirst}>
-            <div className={styles.typeSelect}>
-              <select value={type} onChange={(e) => setType(e.target.value)}>
-                <option value="">Select a type</option>
-                <option value="Summerhouse">Summerhouse</option>
-                <option value="Apartment">Apartment</option>
-                <option value="House">House</option>
-              </select>
+          <div className={styles.searchResp}>
+            {" "}
+            <div className={styles.midFirst}>
+              <div className={styles.typeSelect}>
+                <select value={type} onChange={(e) => setType(e.target.value)}>
+                  <option value="">Select a type</option>
+                  <option value="Summerhouse">Summerhouse</option>
+                  <option value="Apartment">Apartment</option>
+                  <option value="House">House</option>
+                </select>
+              </div>
+              <div className={styles.idSearch}>
+                <input
+                  value={id}
+                  type="text"
+                  id="id"
+                  name="search with id"
+                  placeholder="Search with property ID"
+                  onChange={(event) => setId(event.target.value)}
+                ></input>
+              </div>
             </div>
-            <div className={styles.idSearch}>
-              <input
-                value={id}
-                type="text"
-                id="id"
-                name="search with id"
-                placeholder="Search with property ID"
-                onChange={(event) => setId(event.target.value)}
-              ></input>
+            <div className={styles.midSecond}>
+              <div className={styles.addressSearch}>
+                <input
+                  value={address}
+                  type="text"
+                  id="address"
+                  name="address"
+                  placeholder="Type address"
+                  onChange={(event) =>
+                    setAddress(capitalizeFirstLetter(event.target.value))
+                  }
+                ></input>
+              </div>
+              <div className={styles.locationSearch}>
+                <input
+                  value={location}
+                  type="text"
+                  id="location"
+                  name="location"
+                  placeholder="Type location"
+                  onChange={(event) =>
+                    setLocation(capitalizeFirstLetter(event.target.value))
+                  }
+                ></input>
+              </div>
             </div>
           </div>
-          <div className={styles.midSecond}>
-            <div className={styles.addressSearch}>
-              <input
-                value={address}
-                type="text"
-                id="address"
-                name="address"
-                placeholder="Type address"
-                onChange={(event) =>
-                  setAddress(capitalizeFirstLetter(event.target.value))
-                }
-              ></input>
-            </div>
-            <div className={styles.locationSearch}>
-              <input
-                value={location}
-                type="text"
-                id="location"
-                name="location"
-                placeholder="Type location"
-                onChange={(event) =>
-                  setLocation(capitalizeFirstLetter(event.target.value))
-                }
-              ></input>
-            </div>
-          </div>
+
           <div className={styles.midThird}>
-            <div>
+            <div className={styles.priceSizeContainer}>
               {" "}
               <p>Price</p>
               <div className={styles.price}>
@@ -137,7 +141,7 @@ const SearchBuild = () => {
                   placeholder="min"
                   onChange={(event) => setMinPrice(event.target.value)}
                 ></input>
-                
+
                 <p>-</p>
                 <input
                   value={maxPrice}
@@ -150,7 +154,7 @@ const SearchBuild = () => {
                 <p>€</p>
               </div>
             </div>
-            <div>
+            <div className={styles.priceSizeContainer}>
               {" "}
               <p>Square Meters</p>
               <div className={styles.size}>

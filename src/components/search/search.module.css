@@ -91,6 +91,14 @@
   background-color: #d4d4d4;
 }
 
+.searchResp{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2rem;
+}
+
+
 /* FIRST */
 
 .midFirst {
@@ -219,4 +227,61 @@
     width: 100%;
     justify-content: center;
   }
+}
+
+
+@media only screen and (min-width:1600px) {
+  .searchWrapper {
+    width: 60%;
+    display: flex;
+  }
+
+  .searchResp{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    width: 100%;
+  }
+
+
+  .backgroundImage {
+   
+    height: 70vh;
+  
+  
+  }
+
+  .searchProperties {
+    width: 100%;
+    
+
+  }
+
+  .middleContainer{
+    width: 100%;
+   
+  }
+
+  .buttonWrapper {
+    width: 10%;
+    padding: 01rem;
+  }
+
+  .searchIcon {
+    margin-right: 0;
+  }
+  
+  .midThird {
+   flex-direction: row;
+  
+   justify-content: center;
+  
+  }
+
+.priceSizeContainer{
+  width: 100%;
+}
+
+
+
 }

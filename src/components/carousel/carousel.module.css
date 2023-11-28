@@ -3,7 +3,7 @@
 }
 
 .carouselContainer {
-  background-color: #e7e7e7;
+  background-color:   #f0f0f0;
   padding: 1.75rem 0;
 }
 
@@ -110,4 +110,39 @@
   }
 }
 
-@media only screen and (min-width:1600px) {}
+@media only screen and (min-width:1600px) {
+
+  .carouselContainer h2 {
+    
+    font-size: 40px;
+  
+  }
+
+  .carouselContainer hr.carouselHr {
+    width: 10%;
+  
+  }
+
+  .crsl {
+
+    width: 40%;
+
+  }
+
+  .legend h3 {
+    font-size: 30px;
+ 
+  }
+  
+  .legend p {
+    font-size: 18px;
+    
+  }
+
+  .legend button {
+   font-size: 18px;
+   width: 20%;
+  }
+
+
+}

@@ -20,28 +20,103 @@ const Logo = () => {
 	);
 };
 
-const BigMenu = () => {
+const MenuBuild = () => {
+
+	const [isVisible, setIsVisible] = useState(true);
+
+	useEffect(() => {
+	  let previousScrollPosition = window.pageYOffset;
+	  const handleScroll = () => {
+		const currentScrollPosition = window.pageYOffset;
+		const isVisible = previousScrollPosition > currentScrollPosition;
+		setIsVisible(isVisible);
+		previousScrollPosition = currentScrollPosition;
+	  };
+  
+	  window.addEventListener('scroll', handleScroll);
+	  return () => window.removeEventListener('scroll', handleScroll);
+	}, []);
+
+
+
 	return (
 		<div className={styles.menu}>
-			<Logo />
-			<a id="home" href="/">
-				Home
-			</a>
-			<a id="buy" className="menu-item" href="/buy">
-				Buy
-			</a>
-			<a id="sell" className="menu-item" href="/sell">
-				Sell
-			</a>
-			<a id="blog" className="menu-item" href="/blog">
-				Blog
-			</a>
-			<a id="blog" className="menu-item" href="/about">
-				About Us
-			</a>
-			<a id="contact" className="menu-item" href="/contact">
-				Contact
-			</a>
+		  <Logo />
+		  <a id="home" className={styles.menuItem} href="/">
+			Home
+		  </a>
+		  <a id="buy" className={styles.menuItem} href="/buy">
+			Buy
+		  </a>
+		  <a id="sell" className={styles.menuItem}  href="/sell">
+			Sell
+		  </a>
+		  <a id="blog" className={styles.menuItem}  href="/blog">
+			Blog
+		  </a>
+		  <a id="blog" className={styles.menuItem}  href="/about">
+			About Us
+		  </a>
+		  <a id="contact" className={styles.menuItem}  href="/contact">
+			Contact
+		  </a>
+		</div>
+	  );
+};
+
+const BigMenu = () => {
+	const [isVisible, setIsVisible] = useState(true);
+	const [menuOpen, setMenuOpen] = useState(false);
+	// const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+	const [windowWidth, setWindowWidth] = useState(
+		typeof window !== 'undefined' ? window.innerWidth : 0
+	);
+
+	const handleMenuToggle = () => {
+		setMenuOpen(!menuOpen);
+	};
+
+	useEffect(() => {
+		const handleResize = () => {
+			setWindowWidth(window.innerWidth);
+		};
+
+		if (typeof window !== 'undefined') {
+			window.addEventListener('resize', handleResize);
+			return () => {
+				window.removeEventListener('resize', handleResize);
+			};
+		}
+	}, []);
+
+	useEffect(() => {
+		let lastScrollTop = 0;
+
+		const handleScroll = () => {
+			let st = window.pageYOffset || document.documentElement.scrollTop;
+			if (st > lastScrollTop) {
+				setIsVisible(false);
+			} else {
+				setIsVisible(true);
+			}
+			lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+		};
+
+		window.addEventListener('scroll', handleScroll, false);
+		return () => {
+			window.removeEventListener('scroll', handleScroll, false);
+		};
+	}, []);
+
+	return (
+		<div className={isVisible ? styles.menuVisible : styles.menuHidden}>
+			{windowWidth > 480 && (
+				<>
+					{/* <Logo /> */}
+					<MenuBuild
+					/>
+				</>
+			)}
 		</div>
 	);
 };

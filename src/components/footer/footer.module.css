@@ -48,7 +48,7 @@
 
 
 .footerContainer {
-    border-top: 1px solid #c4c4c4;
+    border-top: 1px solid #cccccc;
     padding: 2rem 0;
     display: flex;
     flex-direction: column;
@@ -247,6 +247,69 @@
 
     .links {
         gap: 1rem;
+    }
+
+    .topButton {
+        color: white;
+        font-size: 13px;
+        height: 5vh;
+        width: 5vw;
+        background-color: var(--color-main-button);
+        justify-content: center;
+    }
+
+    .footerLinks {
+        gap: 0;
+    }
+
+    .footerAddress {
+        margin-top: 5vh;
+    }
+}
+
+
+@media only screen and (min-width: 1600px) {
+
+
+    .footerImage img {
+        width: auto;
+        height: 10vh;
+    }
+
+    .footerWrapper {
+        gap: 0rem;
+    }
+
+
+    .footerTop {
+        width: 60%;
+        gap: 5rem;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .linksSeparation {
+        gap: 10rem;
+        flex-direction: row;
+    }
+
+
+    .icons {
+        font-size: 30px;
+        gap: 4rem;
+
+    }
+
+    .footerWrapper {}
+
+    .footerBottom {
+        width: 80%;
+        gap: 10rem;
+        justify-content: center;
+    }
+
+    .links {
+        gap: 0.25rem;
     }
 
     .topButton {

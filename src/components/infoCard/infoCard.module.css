@@ -128,3 +128,52 @@
     }
 
 }
+
+
+@media only screen and (min-width:1600px) {
+
+
+    .cardWrapper {
+        flex-direction: row;
+    
+    }
+    
+    .cardContainer {
+        height: 600px;
+        width: 30%;
+        gap: 1rem;
+    
+    }
+    
+    .cardContainer img {
+        height: auto;
+    }
+    
+    .cardContainer h2 {
+        font-size: 30px;
+    }
+    
+    .cardContainer p {
+    
+        font-size: 20px;
+        text-align: center;
+        padding: 0 2rem;
+    }
+    
+    .cardContainer img {
+        width: 80%;
+        height: 20vh;
+        object-fit: cover;
+        border: 0.75px solid var(--color-borders);
+        border-top: none;
+        margin-bottom: 3rem;
+    
+    }
+    
+    .cardContainer button {
+    
+        font-size: 17px;
+        margin-top: 3vh;
+    }
+
+}

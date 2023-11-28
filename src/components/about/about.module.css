@@ -1,75 +1,95 @@
 .aboutContainer {
-    background-color: #dfdfdf;
-    padding: 2rem 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  background-color: #e4e4e4;
+  background-image: url(/about-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .aboutWrapper {
-    border: 1px solid #cecece;
-    border-radius: 5px;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 1.5rem;
-    width: 90%;
-    background-color: #e7e7e7;
+  border: 1px solid #cecece;
+  border-radius: 5px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.5rem;
+  width: 90%;
+  background-color: #f0f0f0;
 }
 
 .aboutWrapper h2 {
-    font-family: "Playfair Display";
-    font-weight: 500;
+  font-family: "Playfair Display";
+  font-weight: 500;
 }
 
 .aboutWrapper p {
-    font-size: 15px;
+  font-size: 15px;
 }
 
 .aboutWrapper button {
-    background-color: var(--color-main-button);
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    color: rgb(231, 231, 231);
-    font-size: 14px;
+  background-color: var(--color-main-button);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  color: rgb(231, 231, 231);
+  font-size: 14px;
 }
 
-
-
-@media only screen and (min-width:400px) and (max-width:480px) {}
-
-@media only screen and (min-width:480px) and (max-width:640px) {}
-
-@media only screen and (min-width:640px) and (max-width:1024px) {}
-
-@media only screen and (min-width:1024px) and (max-width:1280px) {
-    .aboutWrapper {
-
-        width: 60%;
-
-    }
+@media only screen and (min-width: 400px) and (max-width: 480px) {
 }
 
-@media (min-width:1280px) and (max-width:1600px) {
+@media only screen and (min-width: 480px) and (max-width: 640px) {
+}
 
+@media only screen and (min-width: 640px) and (max-width: 1024px) {
+}
 
-    .aboutWrapper h2 {
-        font-size: 25px
-    }
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+  .aboutWrapper {
+    width: 60%;
+  }
+}
 
-    .aboutWrapper p {
-        font-size: 18px;
-        width: 50%;
-    }
+@media (min-width: 1280px) and (max-width: 1600px) {
+  .aboutWrapper h2 {
+    font-size: 25px;
+  }
 
-    .aboutWrapper {
+  .aboutWrapper p {
+    font-size: 18px;
+    width: 50%;
+  }
 
-        gap: 1.75rem;
-        width: 70%;
-    }
+  .aboutWrapper {
+    gap: 1.75rem;
+    width: 70%;
+  }
+}
 
+@media only screen and (min-width: 1600px) {
+  .aboutWrapper h2 {
+    font-size: 30px;
+  }
+
+  .aboutWrapper p {
+    font-size: 20px;
+    width: 60%;
+  }
+
+  .aboutWrapper {
+    gap: 1.75rem;
+    width: 40%;
+  }
+
+  .aboutWrapper button {
+    margin: 1rem;
+    font-size: 18px;
+    padding: 0.75rem 2rem;
+  }
 }
