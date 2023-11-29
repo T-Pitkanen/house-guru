@@ -6,10 +6,22 @@
   color: rgb(231, 231, 231);
   font-size: 18px;
   background-color: var(--color-main-button);
-  width: 40%;
+  width: 30%;
 }
 
 .icon {
   font-size: 14px;
   margin-right: 2vw;
+}
+
+@media only screen and (min-width: 1600px) {
+  .button {
+  font-size: 18px;
+    width: 6%;
+  }
+
+  .icon {
+    font-size: 16px;
+    margin-right: 1vw;
+  }
 }

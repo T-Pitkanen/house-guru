@@ -138,7 +138,7 @@ const Buy = () => {
         (!id || property.id === id)
       );
     });
-    
+
     setFilteredProperties(filtered);
     setHasFiltered(true);
   };
@@ -146,7 +146,7 @@ const Buy = () => {
   // Handle pagination
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const totalPages = Math.ceil(
@@ -206,9 +206,19 @@ const Buy = () => {
 
   return (
     <div className={styles.buyPageWrapper}>
-      <Filter properties={properties} onFilter={handleFilter} resetPagination={resetPagination} />
+      <Filter
+        properties={properties}
+        onFilter={handleFilter}
+        resetPagination={resetPagination}
+      />
       {isLoading ? (
-        <Image className = {styles.loader} src="/loader/1488.gif" alt="Loading..." width={50} height={50} />
+        <Image
+          className={styles.loader}
+          src="/loader/1488.gif"
+          alt="Loading..."
+          width={50}
+          height={50}
+        />
       ) : (
         <>
           <div className={styles.containerFound}>
@@ -225,14 +235,14 @@ const Buy = () => {
             {currentItems.map((property) => (
               <Property key={property.id} property={property} />
             ))}
-            </div>
-            <div className={styles.pagination}>
+          </div>
+          <div className={styles.pagination}>
             {[...Array(totalPages)].map((_, i) => (
               <button
                 key={i}
                 onClick={() => handlePageChange(i + 1)}
                 style={
-                  currentPage === i + 1 ? {backgroundColor: '#263864'} : null
+                  currentPage === i + 1 ? { backgroundColor: "#263864" } : null
                 }
               >
                 {i + 1}
@@ -246,5 +256,3 @@ const Buy = () => {
 };
 
 export default Buy;
-
-

@@ -22,6 +22,16 @@ const Slider = ({ id }) => {
   //   console.log("id prop in PropertyPage component:", id);
 
   const [property, setProperties] = useState({});
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 768);
+
+useEffect(() => {
+  const handleResize = () => {
+    setIsLargeScreen(window.innerWidth > 768);
+  };
+
+  window.addEventListener('resize', handleResize);
+  return () => window.removeEventListener('resize', handleResize);
+}, []);
 
   useEffect(() => {
     console.log("Fetching data for id:", id);
@@ -50,6 +60,8 @@ const Slider = ({ id }) => {
       });
   }, [id]);
 
+  
+
   return (
     <div className={styles.carouselContainer}>
       <Carousel
@@ -59,7 +71,7 @@ const Slider = ({ id }) => {
         showStatus={false}
         centerSlidePercentage={100}
         showIndicators={false}
-        showThumbs={false}
+        showThumbs={isLargeScreen}
       >
         {property.images &&
           property.images.map((image) => (

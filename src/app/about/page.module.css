@@ -31,7 +31,7 @@
 
 .aboutWrapper {
   width: 95%;
-  background-color: #FFFFFF;
+  background-color: #f5f5f5;
   border: 1px solid #d3d3d3;
   color: #6a6a6a;
   padding: 2rem 1rem;
@@ -101,3 +101,51 @@
   object-fit: cover;
 }
 
+@media (min-width:1600px) {
+
+  .aboutPage{
+    margin-top: 20vh;
+  }
+
+  .aboutWrapper {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .aboutHeader {
+   width: 50%;
+  
+  }
+  
+  .aboutHeader h1 {
+    font-size: 35px;
+  }
+  
+  .aboutHeader p {
+    font-size: 18px;
+  }
+
+
+
+.brokersWrapper {
+ width: 50%;
+
+}
+
+.brokers {
+  
+  gap: 5rem;
+}
+
+
+
+
+.brokers img {
+  width: 70%;
+  height: 30vh;
+  
+}
+}

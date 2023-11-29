@@ -28,6 +28,8 @@
   font-size: 25px;
   font-weight: 400;
   font-family: 'Playfair Display', serif;
+  width: 70%;
+  color: #424242;
 }
 
 .sellHeader img {
@@ -37,8 +39,9 @@
 }
 
 .sellHeader p {
-  width: 90%;
+  width: 80%;
   font-size: 16px;
+  color: #505050;
 }
 
 .sellBody {
@@ -52,13 +55,14 @@
 }
 
 .whyUs {
-  width: 90%;
+  width: 80%;
 }
 
 .sellBody h2 {
   font-size: 24px;
   font-weight: 400;
   padding-bottom: 5vh;
+  color: #424242;
 }
 
 .sellBody ul {
@@ -71,6 +75,7 @@
 .sellBody li {
   display: flex;
   flex-direction: column;
+  color: #505050;
 }
 
 .sellContact {
@@ -83,6 +88,7 @@
 .sellBody span {
   font-size: 19px;
   font-weight: 600;
+  color: #424242;
 }
 
 .contactHeader {
@@ -95,6 +101,7 @@
 
 .contactHeader h2 {
   font-weight: 500;
+  color: #424242;
 }
 
 
@@ -116,12 +123,13 @@
 
 .contactHeader h3 {
   font-weight: 600;
-
+  color: #424242;
   width: 90%;
 }
 
 .contactHeader p {
   width: 90%;
+  color: #505050;
 }
 
 .contactHeader span {
@@ -144,7 +152,7 @@
   margin-bottom: 10px;
   padding: 0.5rem;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #a0a0a0;
   background-color: #ffffff;
   width: 100%;
   color: #1a1a1a;
@@ -165,20 +173,22 @@
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
-  width: 100%;
+  width: 30%;
 }
 
 .sellBottom {
-  width: 90%;
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
+  color: #505050;
 }
 
 .sellBottom h4 {
   font-size: 19px;
   font-weight: 600;
+  color: #424242;
 }
 
 
@@ -209,4 +219,9 @@
 
 @media only screen and (min-width:1280px) and (max-width:1600px) {}
 
-@media only screen and (min-width:1600px) {}
+@media only screen and (min-width:1600px) {
+
+
+
+
+}

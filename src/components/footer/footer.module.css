@@ -284,7 +284,7 @@
     .footerTop {
         width: 60%;
         gap: 5rem;
-        flex-direction: row;
+        flex-direction: row-reverse;
         justify-content: space-evenly;
     }
 
@@ -298,6 +298,10 @@
         font-size: 30px;
         gap: 4rem;
 
+    }
+
+    .arrowButton{
+        margin-right: 1vh;
     }
 
     .footerWrapper {}
@@ -314,7 +318,7 @@
 
     .topButton {
         color: white;
-        font-size: 13px;
+        font-size: 15px;
         height: 5vh;
         width: 5vw;
         background-color: var(--color-main-button);

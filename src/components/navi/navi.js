@@ -181,7 +181,7 @@ const HamburgerMenu = () => {
 
 	return (
 		<div className={isVisible ? style.navVisible : style.navHidden}>
-			{windowWidth < 460 && (
+			{windowWidth < 490 && (
 				<>
 					<Logo />
 					<MenuBuild

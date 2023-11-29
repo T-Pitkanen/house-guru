@@ -179,7 +179,7 @@ const FilterBuild = () => {
             </div>
             <div className={styles.sizeContainer}>
               {" "}
-              <p>Square Meters</p>
+              <p>Size</p>
               <div className={styles.size}>
                 <input
                   value={minSize}

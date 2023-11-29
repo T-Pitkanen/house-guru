@@ -30,7 +30,7 @@ function BackToTopButton() {
     }
   };
 
-  return <button className={styles.topButton} onClick={scrollToTop}> <FaArrowUp /> Top</button>;
+  return <button className={styles.topButton} onClick={scrollToTop}> <FaArrowUp className={styles.arrowButton} /> Top</button>;
 }
 
 const footerData = {

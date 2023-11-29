@@ -46,3 +46,39 @@
     color: white;
     font-size: 14px;
 }
+
+
+@media (min-width:1600px) {
+
+    .title {
+
+    
+        padding: 1rem 2rem;
+    }
+
+    .header img {
+        object-fit: cover;
+        width: 100%;
+        height: 20vh;
+    }
+
+    .postContainer {
+        width: 30%;
+        height: 450px;
+       
+    }
+
+    .subtitle {
+        font-size: 16px;
+    }
+    
+    .button {
+       
+        font-size: 15px;
+    }
+
+    .titleAnother {
+        font-size: 21px;
+    }
+
+}

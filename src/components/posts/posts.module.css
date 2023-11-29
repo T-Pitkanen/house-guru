@@ -5,3 +5,17 @@
     justify-content: center;
     gap: 6rem;
 }
+
+@media (min-width:1600px) {
+
+
+    .posts{
+        display: flex;
+        flex-direction: row;
+       flex-wrap: wrap;
+       width: 80%;
+    }
+
+
+
+}

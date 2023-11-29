@@ -7,7 +7,7 @@ const Background = () => {
   return (
     <div className={styles.backgroundImage}>
       <Image
-        src="/contact-bg.jpg"
+        src="/landing-bg.jpg"
         alt="background image for contact page"
         width={300}
         height={300}

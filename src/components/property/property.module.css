@@ -84,3 +84,42 @@
     color: #3f3f3f;
 
 }
+
+@media only screen and (min-width:1600px) {
+
+    .propertyContainer{
+        width: 28%;
+        height: 500px;
+    
+    }
+
+    .addressLoc,
+    .location{
+        font-size: 20px;
+    }
+
+    .description{
+        font-size: 16px;
+        width: 50%;
+    }
+
+    .price{
+        font-size: 20px;
+    
+    }
+
+    .details{
+        padding: 1rem;
+    }
+
+    .propertyContainer img {
+        object-fit: cover;
+        width: 100%;
+        height: 30vh;
+    }
+
+    .propertyContainer a{
+        width: 100%;
+        padding: 1rem;
+    }
+}
