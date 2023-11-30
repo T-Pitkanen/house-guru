@@ -3,7 +3,7 @@
 }
 
 .carouselContainer {
-  background-color:   #f0f0f0;
+  background-color: #f0f0f0;
   padding: 1.75rem 0;
 }
 
@@ -103,24 +103,50 @@
 
 @media only screen and (min-width:1280px) and (max-width:1600px) {
 
+  .carouselContainer h2 {
+
+    font-size: 35px;
+
+  }
+
+  .carouselContainer hr.carouselHr {
+    width: 15%;
+
+  }
+
   .crsl {
 
-    width: 60%;
+    width: 40%;
 
+  }
+
+  .legend h3 {
+    font-size: 27px;
+
+  }
+
+  .legend p {
+    font-size: 18px;
+
+  }
+
+  .legend button {
+    font-size: 18px;
+    width: 20%;
   }
 }
 
 @media only screen and (min-width:1600px) {
 
   .carouselContainer h2 {
-    
+
     font-size: 40px;
-  
+
   }
 
   .carouselContainer hr.carouselHr {
     width: 10%;
-  
+
   }
 
   .crsl {
@@ -131,17 +157,17 @@
 
   .legend h3 {
     font-size: 30px;
- 
+
   }
-  
+
   .legend p {
     font-size: 18px;
-    
+
   }
 
   .legend button {
-   font-size: 18px;
-   width: 20%;
+    font-size: 18px;
+    width: 20%;
   }
 
 

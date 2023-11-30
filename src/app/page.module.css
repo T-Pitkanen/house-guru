@@ -67,19 +67,31 @@
     .pageHeader {
         width: 40%;
     }
+
+    .pageHeader h1 {
+        font-size: 30px;
+
+    }
+
+    .pageHeader p {
+        font-size: 18px;
+        color: #4d4d4d;
+        width: 90%;
+    }
 }
 
 @media only screen and (min-width:1600px) {
 
     .pageHeader {
-       
+
         background-color: rgba(243, 243, 243, 0.295);
         width: 50%;
-      
+
     }
+
     .pageHeader h1 {
         font-size: 40px;
-        
+
     }
 
     .pageHeader p {
@@ -89,9 +101,9 @@
 
 
     .page {
-        
-       
+
+
         gap: 10rem;
-      
+
     }
 }

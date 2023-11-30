@@ -138,26 +138,25 @@ const MenuBuild = ({ isOpen, onStateChange }) => {
 const HamburgerMenu = () => {
 	const [isVisible, setIsVisible] = useState(true);
 	const [menuOpen, setMenuOpen] = useState(false);
-	// const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-	const [windowWidth, setWindowWidth] = useState(
-		typeof window !== 'undefined' ? window.innerWidth : 0
-	);
+	const [windowWidth, setWindowWidth] = useState();
+	const [isScreenSizeChecked, setIsScreenSizeChecked] = useState(false);
 
 	const handleMenuToggle = () => {
 		setMenuOpen(!menuOpen);
 	};
 
 	useEffect(() => {
+		setWindowWidth(window.innerWidth);
+		setIsScreenSizeChecked(true);
+
 		const handleResize = () => {
 			setWindowWidth(window.innerWidth);
 		};
 
-		if (typeof window !== 'undefined') {
-			window.addEventListener('resize', handleResize);
-			return () => {
-				window.removeEventListener('resize', handleResize);
-			};
-		}
+		window.addEventListener('resize', handleResize);
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
 	}, []);
 
 	useEffect(() => {
@@ -179,17 +178,23 @@ const HamburgerMenu = () => {
 		};
 	}, []);
 
+	if (!isScreenSizeChecked) {
+		return null; // Don't render anything until screen size is confirmed
+	}
+
+	if (windowWidth >= 490) {
+		return null; // Don't render anything on larger screens
+	}
+
 	return (
 		<div className={isVisible ? style.navVisible : style.navHidden}>
-			{windowWidth < 490 && (
-				<>
-					<Logo />
-					<MenuBuild
-						isOpen={menuOpen}
-						onStateChange={({ isOpen }) => setMenuOpen(isOpen)}
-					/>
-				</>
-			)}
+			<>
+				<Logo />
+				<MenuBuild
+					isOpen={menuOpen}
+					onStateChange={({ isOpen }) => setMenuOpen(isOpen)}
+				/>
+			</>
 		</div>
 	);
 };

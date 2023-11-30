@@ -12,70 +12,67 @@ const Logo = () => {
 			<Image
 				src="/logo/logo.png"
 				alt="Logo"
-				width={100} // Set the desired width
-				height={75} // Set the desired height
+				width={90} // Set the desired width
+				height={65} // Set the desired height
 				style={{ zIndex: '1000' }}
 			/>
 		</a>
 	);
 };
-
 const MenuBuild = () => {
-
 	const [isVisible, setIsVisible] = useState(true);
 
 	useEffect(() => {
-	  let previousScrollPosition = window.pageYOffset;
-	  const handleScroll = () => {
-		const currentScrollPosition = window.pageYOffset;
-		const isVisible = previousScrollPosition > currentScrollPosition;
-		setIsVisible(isVisible);
-		previousScrollPosition = currentScrollPosition;
-	  };
-  
-	  window.addEventListener('scroll', handleScroll);
-	  return () => window.removeEventListener('scroll', handleScroll);
+		let previousScrollPosition = window.pageYOffset;
+		const handleScroll = () => {
+			const currentScrollPosition = window.pageYOffset;
+			const isVisible = previousScrollPosition > currentScrollPosition;
+			setIsVisible(isVisible);
+			previousScrollPosition = currentScrollPosition;
+		};
+
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
 
-
-
+	const menuClass = isVisible ? styles.menuVisible : styles.menuHidden;
 	return (
-		<div className={styles.menu}>
-		  <Logo />
-		  <a id="home" className={styles.menuItem} href="/">
-			Home
-		  </a>
-		  <a id="buy" className={styles.menuItem} href="/buy">
-			Buy
-		  </a>
-		  <a id="sell" className={styles.menuItem}  href="/sell">
-			Sell
-		  </a>
-		  <a id="blog" className={styles.menuItem}  href="/blog">
-			Blog
-		  </a>
-		  <a id="blog" className={styles.menuItem}  href="/about">
-			About Us
-		  </a>
-		  <a id="contact" className={styles.menuItem}  href="/contact">
-			Contact
-		  </a>
+		<div className={`${styles.menu} ${menuClass}`}>
+			<div className={styles.menuContainer}>
+				<Logo />
+				<a id="home" className={styles.menuItem} href="/">
+					Home
+				</a>
+				<a id="buy" className={styles.menuItem} href="/buy">
+					Buy
+				</a>
+				<a id="sell" className={styles.menuItem} href="/sell">
+					Sell
+				</a>
+				<a id="blog" className={styles.menuItem} href="/blog">
+					Blog
+				</a>
+				<a id="blog" className={styles.menuItem} href="/about">
+					About Us
+				</a>
+				<a id="contact" className={styles.menuItem} href="/contact">
+					Contact
+				</a>
+			</div>
 		</div>
-	  );
+	);
 };
 
 const BigMenu = () => {
 	const [isVisible, setIsVisible] = useState(true);
 	const [menuOpen, setMenuOpen] = useState(false);
-	// const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-	const [windowWidth, setWindowWidth] = useState(
-		typeof window !== 'undefined' ? window.innerWidth : 0
-	);
+	const [windowWidth, setWindowWidth] = useState(0);
 
 	const handleMenuToggle = () => {
 		setMenuOpen(!menuOpen);
 	};
 
+	/*
 	useEffect(() => {
 		const handleResize = () => {
 			setWindowWidth(window.innerWidth);
@@ -87,24 +84,18 @@ const BigMenu = () => {
 				window.removeEventListener('resize', handleResize);
 			};
 		}
-	}, []);
+	}, []); */
 
 	useEffect(() => {
-		let lastScrollTop = 0;
+		setWindowWidth(window.innerWidth);
 
-		const handleScroll = () => {
-			let st = window.pageYOffset || document.documentElement.scrollTop;
-			if (st > lastScrollTop) {
-				setIsVisible(false);
-			} else {
-				setIsVisible(true);
-			}
-			lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+		const handleResize = () => {
+			setWindowWidth(window.innerWidth);
 		};
 
-		window.addEventListener('scroll', handleScroll, false);
+		window.addEventListener('resize', handleResize);
 		return () => {
-			window.removeEventListener('scroll', handleScroll, false);
+			window.removeEventListener('resize', handleResize);
 		};
 	}, []);
 
@@ -113,8 +104,7 @@ const BigMenu = () => {
 			{windowWidth > 480 && (
 				<>
 					{/* <Logo /> */}
-					<MenuBuild
-					/>
+					<MenuBuild />
 				</>
 			)}
 		</div>

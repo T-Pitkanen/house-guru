@@ -22,7 +22,7 @@
   opacity: 1;
   transition: opacity 1s ease-in-out;
   z-index: 1000;
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(255, 255, 255);
   border-bottom: 1px solid rgb(82, 82, 82);
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
@@ -198,6 +198,82 @@
   font-weight: 600;
 }
 
+
+@media only screen and (min-width:400px) and (max-width:480px) {}
+
+@media only screen and (min-width:480px) and (max-width:640px) {}
+
+@media only screen and (min-width:640px) and (max-width:1024px) {}
+
+@media only screen and (min-width:1024px) and (max-width:1280px) {}
+
+@media only screen and (min-width:1280px) and (max-width:1600px) {
+  .headerWrapper {
+    width: 50%;
+  }
+
+  .carouselContainer {
+    align-items: start;
+  }
+
+  .address {
+    width: 100%;
+  }
+
+  .address h1 {
+    font-size: 27px;
+  }
+
+  .descNprice {
+    width: 100%;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .price {
+    font-size: 20px;
+  }
+
+  .crsl {
+    width: 100%;
+    align-items: start;
+  }
+
+  .infoVisible {
+    padding: 1rem 20rem;
+  }
+
+  .infoVisible p {
+    font-size: 16px;
+  }
+
+  .content {
+    width: 50%;
+    align-items: start;
+  }
+
+  .contactProperty form {
+    width: 30%;
+  }
+
+  .contactProperty form input[type="submit"] {
+
+    width: 20%;
+  }
+
+  .accordion {
+
+    width: 50%;
+
+  }
+
+  .goBackButton {
+    width: 10%;
+  }
+}
+
 @media only screen and (min-width: 1600px) {
   .headerWrapper {
     width: 50%;
@@ -245,18 +321,18 @@
     align-items: start;
   }
 
-  .contactProperty form{
+  .contactProperty form {
     width: 30%;
   }
 
   .contactProperty form input[type="submit"] {
-  
+
     width: 20%;
   }
 
   .accordion {
-   
+
     width: 50%;
-   
+
   }
 }

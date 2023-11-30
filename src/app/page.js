@@ -9,19 +9,6 @@ import About from '@/components/about/about';
 import { useEffect } from 'react';
 
 export default function Home() {
-	/*
-	useEffect(() => {
-		if (typeof window !== 'undefined') {
-			if (!localStorage.getItem('alertShown')) {
-				if (window.innerWidth > 1024) {
-					alert('Use your fkn PHONE TY!!!!!!');
-				} else {
-					alert('HOWDY!');
-				}
-				localStorage.setItem('alertShown', 'true');
-			}
-		}
-	}, []);*/
 	return (
 		<div className={styles.page}>
 			<div className={styles.pageHeader}>

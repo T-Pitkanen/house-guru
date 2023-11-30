@@ -91,7 +91,7 @@
   background-color: #d4d4d4;
 }
 
-.searchResp{
+.searchResp {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -219,14 +219,61 @@
 }
 
 @media (min-width: 1280px) and (max-width: 1600px) {
-  .searchWrapper {
+  /* .searchWrapper {
     width: 60%;
   }
 
   .midThird {
     width: 100%;
     justify-content: center;
+  } */
+
+  .searchWrapper {
+    width: 65%;
+    display: flex;
   }
+
+  .searchResp {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .backgroundImage {
+    height: 70vh;
+  }
+
+  .searchProperties {
+    width: 100%;
+  }
+
+  .middleContainer {
+    width: 100%;
+  }
+
+  .buttonWrapper {
+    width: 10%;
+    padding: 2rem 1rem;
+  }
+
+  .searchIcon {
+    margin-right: 0;
+  }
+
+  .midThird {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .midThird p {
+    font-size: 15px;
+  }
+
+  .priceSizeContainer {
+    width: 100%;
+  }
+
 }
 
 
@@ -236,7 +283,7 @@
     display: flex;
   }
 
-  .searchResp{
+  .searchResp {
     display: flex;
     flex-direction: row;
     gap: 2rem;
@@ -245,21 +292,21 @@
 
 
   .backgroundImage {
-   
+
     height: 70vh;
-  
-  
+
+
   }
 
   .searchProperties {
     width: 100%;
-    
+
 
   }
 
-  .middleContainer{
+  .middleContainer {
     width: 100%;
-   
+
   }
 
   .buttonWrapper {
@@ -270,17 +317,17 @@
   .searchIcon {
     margin-right: 0;
   }
-  
+
   .midThird {
-   flex-direction: row;
-  
-   justify-content: center;
-  
+    flex-direction: row;
+
+    justify-content: center;
+
   }
 
-.priceSizeContainer{
-  width: 100%;
-}
+  .priceSizeContainer {
+    width: 100%;
+  }
 
 
 

@@ -1,14 +1,12 @@
-
-
-.page{
+.page {
     color: black;
     padding-top: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
-    
+
+
 }
 
 .loader {
@@ -17,7 +15,7 @@
     height: auto;
 }
 
-.buyPageWrapper{
+.buyPageWrapper {
     margin-top: 13vh;
     display: flex;
     flex-direction: column;
@@ -26,7 +24,7 @@
     width: 100%;
 }
 
-.buyProperties{
+.buyProperties {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -35,13 +33,13 @@
     gap: 5rem;
 }
 
-.containerFound{
+.containerFound {
     width: 100%;
 }
 
-.foundProperties{
+.foundProperties {
     margin: 5vh 0;
-   
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,7 +47,7 @@
     color: rgb(99, 99, 99);
 }
 
-.numberColor{
+.numberColor {
     font-size: 19px;
     font-weight: 600;
     color: rgb(133, 133, 133);
@@ -60,7 +58,7 @@
     margin: 8vh 0;
 }
 
-.pagination button{
+.pagination button {
     background-color: var(--color-main-button);
     padding: 0.75rem;
     font-size: 15px;
@@ -70,13 +68,38 @@
     color: white;
 }
 
-@media only screen and (min-width:1600px) {
 
-    .buyProperties{
+@media only screen and (min-width:400px) and (max-width:480px) {}
+
+@media only screen and (min-width:480px) and (max-width:640px) {}
+
+@media only screen and (min-width:640px) and (max-width:1024px) {}
+
+@media only screen and (min-width:1024px) and (max-width:1280px) {}
+
+@media only screen and (min-width:1280px) and (max-width:1600px) {
+    .buyProperties {
         width: 90%;
         flex-direction: row;
         flex-wrap: wrap;
-       
+
+    }
+
+    .loader {
+        margin: 10vh;
+        width: 2vw;
+        height: auto;
+    }
+}
+
+
+@media only screen and (min-width:1600px) {
+
+    .buyProperties {
+        width: 90%;
+        flex-direction: row;
+        flex-wrap: wrap;
+
     }
 
     .loader {
