@@ -20,14 +20,14 @@ export const getPropertyData = async () => {
   return data;
 }; */
 
-export const getPropertyById = async (id) => {
+export const getPropertyById = async (_id) => {
   console.log(propertyData);
 
   if (propertyData.length === 0) {
     await getPropertyData();
   }
 
-  return propertyData.find((property) => property.id === id);
+  return propertyData.find((property) => property._id === _id);
 };
 
 export const getPropertyDataMock = async () => {

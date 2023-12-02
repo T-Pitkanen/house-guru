@@ -14,7 +14,7 @@ import Accordion from "@/components/accordion/accordion";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-const Slider = ({ _id }) => {
+const Slider = ({ id }) => {
   const router = useRouter();
 
   //   const { id } = params;
@@ -31,12 +31,13 @@ useEffect(() => {
 
   window.addEventListener('resize', handleResize);
   return () => window.removeEventListener('resize', handleResize);
+
 }, []);
 
   useEffect(() => {
-    console.log("Fetching data for id:", _id);
+    console.log("Fetching data for id:", id);
 
-    getPropertyById(_id)
+    getPropertyById(id)
       .then((data) => {
         console.log("data in PropertyPage component:", data);
         if (data) {
@@ -53,13 +54,13 @@ useEffect(() => {
           };
           setProperties(propertyData);
         } else {
-          console.error(`No data returned for id: ${id}`);
+          console.error(`No data returned for id: ${_id}`);
         }
       })
       .catch((error) => {
         console.error("Error fetching property:", error);
       });
-  }, [_id]);
+  }, [id]);
 
   
 
@@ -93,21 +94,24 @@ useEffect(() => {
 };
 
 const PropertyPage = ({ params }) => {
+  
   const router = useRouter();
   const [isVisible, setIsVisible] = useState(false);
-  const { _id } = params;
+  const { id } = params;
+  console.log( "params:",params)
   const lastScrollTop = useRef(0);
 
-  console.log("id prop in PropertyPage component:", _id);
+  console.log("id prop in PropertyPage component:", id);
 
   const [property, setProperties] = useState({});
 
   useEffect(() => {
-    console.log("Fetching property for id:", _id);
+    console.log("Fetching property for id:", id);
 
-    getPropertyById(_id)
+    getPropertyById(id)
       .then((data) => {
         console.log("data in PropertyPage component:", data);
+        console.log("ID in PropertyPage component:", id);
         if (data) {
           const propertyData = {
             address: data.address,
@@ -120,17 +124,17 @@ const PropertyPage = ({ params }) => {
             bathrooms: data.bathrooms,
             bedrooms: data.bedrooms,
             info: data.info,
-            _id: data._id,
+            _id: data.id,
           };
           setProperties(propertyData);
         } else {
-          console.error(`No data returned for id: ${_id}`);
+          console.error(`No data returned for id: ${id}`);
         }
       })
       .catch((error) => {
         console.error("Error fetching property:", error);
       });
-  }, [_id]);
+  }, [id]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -163,7 +167,7 @@ const PropertyPage = ({ params }) => {
         {property.address ? (
           <div className={styles.propertyWrapper}>
             <div className={styles.headerWrapper}>
-              <Slider id={_id} />
+              <Slider id={id} />
               <div className={styles.address}>
                 {" "}
                 <h1>{property.address},</h1>

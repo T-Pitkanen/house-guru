@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 mongoose.set('runValidators', true);
 
 const propertySchema = new mongoose.Schema({
+    // _id: {type: String},
     image: {type: String},
     address: {type: String},
     location: {type: String},
