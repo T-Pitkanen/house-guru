@@ -1,5 +1,6 @@
 import styles from "./about.module.css";
-
+import Link
+ from "next/link";
 const About = () => {
   return (
     <div className={styles.aboutContainer}>
@@ -22,7 +23,7 @@ const About = () => {
           We look forward to working with you to fulfill your housing goals. Get
           in touch to begin your successful real estate journey.
         </p>
-        <button>More of Us</button>
+          <Link href='/about'><button>More of Us</button></Link>  
       </div>
     </div>
   );

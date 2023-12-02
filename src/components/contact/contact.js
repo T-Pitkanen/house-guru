@@ -16,6 +16,22 @@ const Background = () => {
   );
 };
 
+const onSubmit = async (data) => {
+  const response = await fetch('/api/contact', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  });
+
+  if (response.ok) {
+    console.log('Data saved successfully');
+  } else {
+    console.error('Error saving data');
+  }
+};
+
 const ContactForm = () => {
   const {
     register,

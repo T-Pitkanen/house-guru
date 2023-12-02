@@ -23,12 +23,13 @@
   font-family: "Playfair Display", serif;
   font-size: 28px;
   font-weight: 500;
-  color: #666666;
+  color: #5a5a5a;
 }
 
 .formHeader p {
   font-size: 15px;
   padding: 0 3rem;
+  color: #6b6b6b;
   text-align: center;
 }
 
@@ -51,7 +52,7 @@
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #b8b8b8;
   background-color: #ffffff;
   width: 80%;
   color: #1a1a1a;
@@ -100,7 +101,7 @@
 
 @media (min-width: 1600px) {
   .form {
-    width: 50%;
+    width: 40%;
     background-color: #eeeeee;
 
   }

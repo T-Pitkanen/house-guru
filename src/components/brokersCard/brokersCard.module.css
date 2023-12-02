@@ -74,7 +74,7 @@
 
   }
 
-  .cardContainer h2 {
+  .cardContainer h3 {
 
 
     font-size: 25px;
@@ -98,4 +98,30 @@
 }
 
 
-@media (min-width:1600px) {}
+@media (min-width:1600px) {
+
+  .cardContainer h3 {
+    font-size: 30px;
+  }
+
+  .cardContainer p {
+    font-size: 18px;
+  }
+
+  .cardContainer{
+    width: 40%;
+  }
+
+  .cardContainer img {
+    height: 25vh;
+  }
+
+  .cardContainer button {
+
+ 
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: 18px;
+  
+  }
+}

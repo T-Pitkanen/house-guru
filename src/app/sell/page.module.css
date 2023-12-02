@@ -221,7 +221,54 @@
 
 @media only screen and (min-width:1600px) {
 
+.sellHeader{
+  width: 100%;
+}
 
+.sellHeader h1{
+  font-size: 37px;
+}
 
+.sellHeader img{
+  width: 50%;
+  height: 40vh;
+}
+.sellHeader p{
+  width: 50%;
+  font-size: 18px;
+}
 
+.sellBody{
+  gap: 5rem;
+}
+
+.whyUs{
+  width: 50%;
+  font-size: 18px;
+
+}
+
+.sellContact{
+  width: 100%;
+  margin: 5vh 0;
+}
+
+.contactHeader h3{
+  font-size:25px
+}
+
+.contactHeader p,
+.contactHeader span
+{
+  font-size: 18px;	
+  width: 40%;
+}
+
+.sellContact form{
+  width: 30%;
+}
+
+.sellBottom{
+  width: 50%;
+}
 }

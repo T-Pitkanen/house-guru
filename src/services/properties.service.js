@@ -2,7 +2,7 @@ let propertyData = [];
 
 /*
 export const getPostData = async () => {
-  const url = "/api/posts";
+  const url = "/api/properties";
   const response = await fetch(url);
   const data = await response.json();
   postData = data;
