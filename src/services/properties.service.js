@@ -1,22 +1,24 @@
 let propertyData = [];
 
-/*
-export const getPostData = async () => {
+
+export const getPropertyData = async () => {
   const url = "/api/properties";
   const response = await fetch(url);
   const data = await response.json();
-  postData = data;
-
-  return data;
-
-}; */
-
-export const getPropertyData = async () => {
-  const data = await getPropertyDataMock();
   propertyData = data;
 
   return data;
+
 };
+
+/*
+export const getPropertyData = async () => {
+ const data = await getPropertyDataMock();
+ 
+  propertyData = data;
+
+  return data;
+}; */
 
 export const getPropertyById = async (id) => {
   console.log(propertyData);
@@ -180,7 +182,7 @@ export const getPropertyDataMock = async () => {
       image: "/properties/apartmen2-alrum.jpg",
     },
     {
-      id: "xd69696666",
+      id: "1234567894563",
       address: "1234 Elm Street",
       location: "Cityville",
       type: "House",

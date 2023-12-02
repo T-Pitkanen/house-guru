@@ -11,7 +11,8 @@ const Properties = ({recommended}) => {
 
     const getData = async () => {
 
-      const data = await getPropertyDataMock();
+      // const data = await getPropertyDataMock();
+      const data = await getPropertyData();
 
       let filteredData = recommended ? data.filter( (property) => property.recommended === true ) : data;
 

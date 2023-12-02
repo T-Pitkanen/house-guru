@@ -1,7 +1,9 @@
 import React from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import styles from "./contact.module.css";
 import Image from "next/image";
+import { set } from "mongoose";
 
 const Background = () => {
   return (
@@ -16,30 +18,43 @@ const Background = () => {
   );
 };
 
-const onSubmit = async (data) => {
-  const response = await fetch('/api/contact', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  });
 
-  if (response.ok) {
-    console.log('Data saved successfully');
-  } else {
-    console.error('Error saving data');
-  }
-};
 
 const ContactForm = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset
   } = useForm();
-  const onSubmit = (data) => console.log(data);
-  console.log(errors);
+
+
+  const [message, setMessage] = useState('')
+
+  const onSubmit = async (data) => {
+    const response = await fetch('/api/Messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+  
+    if (response.ok) {
+      console.log('Data saved successfully');
+      reset();
+      console.log(data);
+      setMessage('Sent!')
+      setTimeout(() => {
+        setMessage('Submit');
+      }, 5000);
+    } else {
+      console.error('Error saving data');
+    }
+  };
+
+  // const onSubmit = (data) => console.log(data);
+  // console.log(errors);
 
   return (
     <div className={styles.formWrapper}>
@@ -59,31 +74,32 @@ const ContactForm = () => {
         <input
           type="text"
           placeholder="First name*"
-          {...register("First name", { required: true, maxLength: 80 })}
+          {...register("firstName", { required: true, maxLength: 80 })}
         />
         <input
           type="text"
           placeholder="Last name*"
-          {...register("Last name", { required: true, maxLength: 100 })}
+          {...register("lastName", { required: true, maxLength: 100 })}
         />
         <input
           type="email"
           placeholder="Email*"
-          {...register("Email", { required: true })}
+          {...register("email", { required: true })}
         />
         <input
           type="tel"
           placeholder="Number*"
-          {...register("Number", { required: true })}
+          {...register("number", { required: true })}
         />
         <textarea
           rows="4"
           className={styles.message}
           placeholder="Your Message...*"
-          {...register("Your Message...", { required: true, max: 250 })}
+          {...register("message", { required: true, max: 250 })}
         />
-        <input type="submit" />
+        <input type="submit" onSubmit={onSubmit} value={message || 'Submit'}/>
       </form>
+      
       
     </div>
   );

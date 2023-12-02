@@ -1,8 +1,8 @@
 .propertyContainer {
-  border-top: 1px solid #686868;
+  /* border-top: 1px solid #686868; */
   width: 100%;
   color: black;
-  margin-top: 5vh;
+  margin-top: 10vh;
   padding-bottom: 5rem;
 }
 
@@ -54,6 +54,8 @@
 .crsl {
   width: 90%;
 }
+
+
 
 .headerWrapper {
   display: flex;
@@ -241,6 +243,11 @@
     align-items: start;
   }
 
+  .crslImg{
+    object-fit: cover;
+    max-height: 50vh;
+  }
+
   .infoVisible {
     padding: 1rem 20rem;
   }
@@ -306,6 +313,11 @@
   .crsl {
     width: 100%;
     align-items: start;
+  }
+
+  .crslImg{
+    object-fit: cover;
+    max-height: 50vh;
   }
 
   .infoVisible {

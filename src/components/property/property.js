@@ -7,7 +7,7 @@ const Property = ({ property }) => {
   // console.log('Rendering property', property);
   return (
     <div className={styles.propertyContainer}>
-      <Link href={`/buy/${property.id}`}>
+      <Link href={`/buy/${property._id}`}>
         <div className={styles.header}>
           <Image
             src={property.image}

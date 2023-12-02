@@ -14,7 +14,7 @@ import Accordion from "@/components/accordion/accordion";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-const Slider = ({ id }) => {
+const Slider = ({ _id }) => {
   const router = useRouter();
 
   //   const { id } = params;
@@ -34,9 +34,9 @@ useEffect(() => {
 }, []);
 
   useEffect(() => {
-    console.log("Fetching data for id:", id);
+    console.log("Fetching data for id:", _id);
 
-    getPropertyById(id)
+    getPropertyById(_id)
       .then((data) => {
         console.log("data in PropertyPage component:", data);
         if (data) {
@@ -49,6 +49,7 @@ useEffect(() => {
             type: data.type,
             bathrooms: data.bathrooms,
             bedrooms: data.bedrooms,
+            _id: data._id,
           };
           setProperties(propertyData);
         } else {
@@ -58,7 +59,7 @@ useEffect(() => {
       .catch((error) => {
         console.error("Error fetching property:", error);
       });
-  }, [id]);
+  }, [_id]);
 
   
 
@@ -75,7 +76,7 @@ useEffect(() => {
       >
         {property.images &&
           property.images.map((image) => (
-            <div key={image.id}>
+            <div key={image._id}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 className={styles.crslImg}
@@ -94,17 +95,17 @@ useEffect(() => {
 const PropertyPage = ({ params }) => {
   const router = useRouter();
   const [isVisible, setIsVisible] = useState(false);
-  const { id } = params;
+  const { _id } = params;
   const lastScrollTop = useRef(0);
 
-  console.log("id prop in PropertyPage component:", id);
+  console.log("id prop in PropertyPage component:", _id);
 
   const [property, setProperties] = useState({});
 
   useEffect(() => {
-    console.log("Fetching property for id:", id);
+    console.log("Fetching property for id:", _id);
 
-    getPropertyById(id)
+    getPropertyById(_id)
       .then((data) => {
         console.log("data in PropertyPage component:", data);
         if (data) {
@@ -119,16 +120,17 @@ const PropertyPage = ({ params }) => {
             bathrooms: data.bathrooms,
             bedrooms: data.bedrooms,
             info: data.info,
+            _id: data._id,
           };
           setProperties(propertyData);
         } else {
-          console.error(`No data returned for id: ${id}`);
+          console.error(`No data returned for id: ${_id}`);
         }
       })
       .catch((error) => {
         console.error("Error fetching property:", error);
       });
-  }, [id]);
+  }, [_id]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -161,7 +163,7 @@ const PropertyPage = ({ params }) => {
         {property.address ? (
           <div className={styles.propertyWrapper}>
             <div className={styles.headerWrapper}>
-              <Slider id={id} />
+              <Slider id={_id} />
               <div className={styles.address}>
                 {" "}
                 <h1>{property.address},</h1>
@@ -203,23 +205,23 @@ const PropertyPage = ({ params }) => {
             <div className={styles.accordion}>
               <Accordion title="Property information">
                 <div className={styles.accChildren}>
-                  <p className={styles.accTitle}>Content</p> <p> {property.address} </p>
+                  <p className={styles.accTitle}>Address</p> <p> {property.address} </p>
                 </div>
                 <div className={styles.accChildren}>
-                  <p className={styles.accTitle}>Content </p> <p> {property.location} </p>
+                  <p className={styles.accTitle}>Location </p> <p> {property.location} </p>
                 </div>
                 <div className={styles.accChildren}>
-                  <p className={styles.accTitle}>Content </p> <p> {property.square_meters} </p>
+                  <p className={styles.accTitle}>Size </p> <p> {property.square_meters} m² </p>
                 </div>
               </Accordion>
               <Accordion title="Plot">
-                <p>Content for Section 2</p>
+                <p>Content for Plot</p>
               </Accordion>
               <Accordion title="Equipment">
-                <p>Content for Section 2</p>
+                <p>Content for Equipment</p>
               </Accordion>
               <Accordion title="Price and housing costs">
-                <p>Content for Section 2</p>
+                <p>Content for Costs</p>
               </Accordion>
             </div>
             <GoBackButton className={styles.goBackButton} />

@@ -1,10 +1,11 @@
 import dbConnect from "@/lib/dbconnect";
-import propertyModel from "@/lib/models/post.model";
+import propertyModel from "@/lib/models/property.model";
 import { NextResponse } from "next/server";
 
 
 export async function GET() {
 
+    
     await dbConnect();
 
     return propertyModel.find({}).then( (doc) => {
@@ -12,14 +13,14 @@ export async function GET() {
         return NextResponse.json(doc)
 
     } )
-
+  
 
 }
 
 export async function POST(request) {
 
+   
     let data = await request.json();
-
     await dbConnect();
 
     return propertyModel.create(data).then( (doc) => {

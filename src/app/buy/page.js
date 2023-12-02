@@ -79,7 +79,8 @@ const Buy = () => {
     const minSize = searchParams.get("minSize");
     const maxSize = searchParams.get("maxSize");
     const location = searchParams.get("location");
-    const id = searchParams.get("id");
+    // const id = searchParams.get("id");
+    const id = searchParams.get("_id");
 
     // console.log("type:", type, "address:", address, "minPrice:", minPrice, "maxPrice:", maxPrice, "minSize:", minSize, "maxSize:", maxSize, "location:", location, "id:", id);
 
@@ -100,7 +101,8 @@ const Buy = () => {
             (!minSize || property.price >= minSize) &&
             (!maxSize || property.price <= maxSize) &&
             (!location || property.location === location) &&
-            (!id || property.id === id)
+            (!id || property._id === id)
+            // (!id || property.id === id)
           );
         });
         setProperties(filtered);
@@ -121,7 +123,8 @@ const Buy = () => {
     maxPrice,
     minSize,
     maxSize,
-    id,
+    // id,
+    _id,
     location
   ) => {
     const filtered = properties.filter((property) => {
@@ -135,7 +138,8 @@ const Buy = () => {
         (!maxSize || property.price <= maxSize) &&
         (!location ||
           property.location.toLowerCase().includes(location.toLowerCase())) &&
-        (!id || property.id === id)
+        // (!id || property.id === id)
+        (!id || property._id === id)
       );
     });
 
@@ -233,7 +237,8 @@ const Buy = () => {
           </div>
           <div className={styles.buyProperties}>
             {currentItems.map((property) => (
-              <Property key={property.id} property={property} />
+              // <Property key={property.id} property={property} />
+              <Property key={property._id} property={property} />
             ))}
           </div>
           <div className={styles.pagination}>

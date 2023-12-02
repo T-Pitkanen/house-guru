@@ -5,12 +5,15 @@ mongoose.set('runValidators', true);
 const propertySchema = new mongoose.Schema({
     image: {type: String},
     address: {type: String},
+    location: {type: String},
     type: {type: String},
     bedrooms: {type: Number},
     bathrooms: {type: Number},
-    square_feet: {type: Number},
-    price: {type: Number},
+    square_meters: {type: Number},
+    price: {type: String},
     description: {type: String},
+    images: {type: Array},
+    info: {type: Array},
 },{
     strict: true
 })
