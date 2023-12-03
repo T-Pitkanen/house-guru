@@ -1,6 +1,7 @@
 let propertyData = [];
 
 
+/*LOCALHOST
 export const getPropertyData = async () => {
   const url = "/api/properties";
   const response = await fetch(url);
@@ -10,8 +11,29 @@ export const getPropertyData = async () => {
   return data;
 
 };
+*/
 
-/*
+/*ATLAS*/
+export const getPropertyData = async () => {
+  const response = await fetch('/api/properties');
+
+  if (!response.ok) {
+    console.log('Request failed with status', response.status);
+    return;
+  }
+
+  console.log('Response', response);
+
+  const data = await response.json();
+  propertyData = data;
+
+  return data;
+};
+
+
+
+
+/* DATAMOCK
 export const getPropertyData = async () => {
  const data = await getPropertyDataMock();
  
@@ -20,6 +42,8 @@ export const getPropertyData = async () => {
   return data;
 }; */
 
+
+/* LOCALHOST AND ATLAS */
 export const getPropertyById = async (_id) => {
   console.log(propertyData);
 
@@ -30,6 +54,10 @@ export const getPropertyById = async (_id) => {
   return propertyData.find((property) => property._id === _id);
 };
 
+
+
+
+// PROPERTYMOCK
 export const getPropertyDataMock = async () => {
   return [
     {

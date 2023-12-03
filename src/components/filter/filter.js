@@ -218,7 +218,9 @@ const FilterBuild = () => {
 };
 
 const Filter = ({ properties, onFilter, resetPagination }) => {
-	resetPagination();
+	useEffect(() => {
+		resetPagination();
+	  }, [resetPagination]);
 
 	return (
 		<>
