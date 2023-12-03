@@ -16,7 +16,7 @@
   align-items: center;
   padding: 2rem 5vw 3rem 5vw;
   height: auto;
-  background-color: #f3f1f1;
+  background-color: #fdf6e8;
   text-align: center;
   /* border: 0.5px solid #c7c7c7; */
   border-top: 1px solid rgb(207, 207, 207);
@@ -59,7 +59,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fafafafa;
+  background-color: #fdfafa;
 }
 
 .postTitle {
@@ -103,6 +103,11 @@
 }
 
 @media (min-width: 1600px) {
+
+  .postContainer{
+    margin-top: 18vh;
+  }
+  
   .headerWrapper {
     width: 100%;
     gap: 3rem;
@@ -114,7 +119,8 @@
   }
 
   .headerWrapper img {
-    width: 50%;
+    width: 40%;
+    height: 30vh;
   }
 
   .postTitle {

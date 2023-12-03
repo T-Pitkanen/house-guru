@@ -39,8 +39,8 @@ const PostPage = ({ params }) => {
 						<Image
 								src={post.image}
 								alt={post.title}
-								width={300}
-								height={300}
+								width={500}
+								height={500}
 							/>
 					</div>
 					<div className={styles.contentWrapper}>

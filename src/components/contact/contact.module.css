@@ -39,7 +39,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #fafafa;
+  background-color: #f8eedb;
   padding: 2rem 0;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -127,7 +127,6 @@
 @media (min-width: 1600px) {
   .form {
     width: 40%;
-    background-color: #eeeeee;
   }
 
   .formHeader hr {

@@ -5,6 +5,9 @@
     justify-content: center;
 }
 
+.loginForm h1{
+  color: #474747;
+} 
 
 .loginForm{
     width: 80%;
@@ -13,7 +16,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 20px;
-    background-color: #f0f0f0;
+    background-color: #faf4e9;
     color: #6b6b6b;
     gap: 1rem;
     border: 1px solid #bbbbbb;

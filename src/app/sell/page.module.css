@@ -19,7 +19,7 @@
   padding: 2rem 0;
   gap: 1.75rem;
   border-top: 1px solid #e6e6e6;
-  background-color: #f3f1f1;
+  background-color: #f7f0e2;
 }
 
 .sellHeader h1 {
@@ -199,23 +199,87 @@
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+
+  .sellHeader {
+    width: 60%;
+    padding: 10rem 0;
+    margin-bottom: 5vh;
+  }
+
+  .sellHeader h1 {
+    font-size: 32px;
+    font-weight: 500;
+  }
+
+  .sellHeader img {
+    width: 40%;
+    height: auto;
+  }
+  .sellHeader p {
+    width: 40%;
+    font-size: 16px;
+  }
+
+  .sellBody {
+    gap: 5rem;
+  }
+
+  .whyUs {
+    width: 50%;
+    font-size: 17px;
+  }
+
+  .whyUs p {
+    font-size: 16px;
+    color:#424242;
+  }
+
+  .whyUs h2{
+    padding-top: 5vh;
+  }
+
+  .sellContact {
+    width: 100%;
+    margin: 5vh 0;
+  }
+
+  .contactHeader h3 {
+    font-size: 20px;
+  }
+
+  .contactHeader p,
+  .contactHeader span {
+    font-size: 16px;
+    width: 40%;
+  }
+
+  .sellContact form {
+    width: 30%;
+  }
+
+  .sellBottom {
+    width: 50%;
+  }
 }
 
 @media only screen and (min-width: 1280px) and (max-width: 1600px) {
   .sellHeader {
-    width: 100%;
+    width: 60%;
+    padding: 10rem 0;
+    margin-bottom: 5vh;
   }
 
   .sellHeader h1 {
     font-size: 37px;
+    font-weight: 500;
   }
 
   .sellHeader img {
-    width: 50%;
-    height: 40vh;
+    width: 40%;
+    height: auto;
   }
   .sellHeader p {
-    width: 50%;
+    width: 40%;
     font-size: 18px;
   }
 
@@ -226,6 +290,15 @@
   .whyUs {
     width: 50%;
     font-size: 18px;
+  }
+
+  .whyUs p {
+    font-size: 18px;
+    color:#424242;
+  }
+
+  .whyUs h2{
+    padding-top: 5vh;
   }
 
   .sellContact {
@@ -254,19 +327,22 @@
 
 @media only screen and (min-width: 1600px) {
   .sellHeader {
-    width: 100%;
+    width: 60%;
+    padding: 10rem 0;
+    margin-bottom: 5vh;
   }
 
   .sellHeader h1 {
     font-size: 37px;
+    font-weight: 500;
   }
 
   .sellHeader img {
-    width: 50%;
-    height: 40vh;
+    width: 40%;
+    height: auto;
   }
   .sellHeader p {
-    width: 50%;
+    width: 40%;
     font-size: 18px;
   }
 
@@ -277,6 +353,15 @@
   .whyUs {
     width: 50%;
     font-size: 18px;
+  }
+
+  .whyUs p {
+    font-size: 18px;
+    color:#424242;
+  }
+
+  .whyUs h2{
+    padding-top: 5vh;
   }
 
   .sellContact {

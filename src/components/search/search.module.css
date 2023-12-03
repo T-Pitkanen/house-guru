@@ -46,7 +46,7 @@
 .searchButton {
   width: 100%;
   padding: 1rem;
-  background-color: var(--color-main);
+  background-color: #f8eedbbe;
 
   color: #808080;
   font-weight: 600;
@@ -97,7 +97,6 @@
   width: 100%;
   gap: 2rem;
 }
-
 
 /* FIRST */
 
@@ -176,7 +175,7 @@
   padding: 1rem;
   border: 0.75px solid #acacac;
   border-radius: 5px;
-  background-color: var(--color-main);
+  background-color: #e4d4b7be;
 
   color: #6e6e6e;
   font-weight: 500;
@@ -194,12 +193,13 @@
   padding: 1rem 0;
 }
 
-@media only screen and (min-width:400px) and (max-width:480px) {}
+@media only screen and (min-width: 400px) and (max-width: 480px) {
+}
 
 /* @media only screen and (min-width:480px) and (max-width:640px) {} */
 
-
-@media only screen and (min-width:1600px) {}
+@media only screen and (min-width: 1600px) {
+}
 
 @media (min-width: 640px) and (max-width: 1024px) {
   .searchWrapper {
@@ -207,7 +207,6 @@
   }
 
   .backgroundImage {
-
     height: 65vh;
   }
 }
@@ -273,11 +272,9 @@
   .priceSizeContainer {
     width: 100%;
   }
-
 }
 
-
-@media only screen and (min-width:1600px) {
+@media only screen and (min-width: 1600px) {
   .searchWrapper {
     width: 60%;
     display: flex;
@@ -290,23 +287,21 @@
     width: 100%;
   }
 
-
   .backgroundImage {
-
     height: 70vh;
-
-
   }
 
   .searchProperties {
     width: 100%;
-
-
   }
 
   .middleContainer {
     width: 100%;
+  }
 
+  .middleContainer input,
+  .middleContainer select {
+    font-size: 18px;
   }
 
   .buttonWrapper {
@@ -322,13 +317,13 @@
     flex-direction: row;
 
     justify-content: center;
+  }
 
+  .midThird p {
+    font-size: 18px;
   }
 
   .priceSizeContainer {
     width: 100%;
   }
-
-
-
 }

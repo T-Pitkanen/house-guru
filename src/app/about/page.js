@@ -5,25 +5,25 @@ import styles from './page.module.css';
 
 const brokers = [
 	{
-		name: 'Firstname Lastname',
-		email: 'email@example.com',
-		phone: '123-456-7890',
-		education: "Bachelor's Degree",
-		image: '/meet-agents.jpg',
+		name: 'John Mitchell',
+		email: ' john.mitchell@houseguru.com',
+		phone: '(555) 987-6543',
+		education: "Certified Real Estate Specialist (CRES)",
+		image: '/brokers/broker-man.jpg',
 	},
 	{
-		name: 'Firstname Lastname',
-		email: 'email@example.com',
-		phone: '123-456-7890',
-		education: "Bachelor's Degree",
-		image: '/selling.jpg',
+		name: 'Daniel Rivera',
+		email: 'daniel.rivera@houseguru.com',
+		phone: '(555) 987-6543',
+		education: "Certified Real Estate Specialist (CRES)",
+		image: '/brokers/broker-man2.jpg',
 	},
 	{
-		name: 'Firstname Lastname',
-		email: 'email@example.com',
-		phone: '123-456-7890',
-		education: "Bachelor's Degree",
-		image: '/background.jpg',
+		name: 'Olivia Johnson',
+		email: 'olivia.johnson@houseguru.com',
+		phone: ' (555) 123-4567',
+		education: "Certified Real Estate Specialist (CRES)",
+		image: '/brokers/broker-woman.jpg',
 	},
 	// Add more broker objects here...
 ];
@@ -61,7 +61,7 @@ const AboutPage = () => {
 						</p>{' '}
 					</div>
 					<div className={styles.brokers}>
-						<h2>Meet Our Brokers</h2>
+						
 						{brokers.map((broker, index) => (
 							<div key={index} className={styles.brokersWrapper}>
 								<Image
