@@ -9,6 +9,7 @@ import About from '@/components/about/about';
 import FeaturingCard from '@/components/featuring/featuring';
 
 export default function Home() {
+	/*
 	const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 1300);
 
 	useEffect(() => {
@@ -28,7 +29,26 @@ export default function Home() {
 		  window.removeEventListener('resize', handleResize);
 		}
 	  };
-	}, []);
+	}, []); */
+
+	const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+	useEffect(() => {
+	  const handleResize = () => {
+		setIsLargeScreen(window.innerWidth > 1300);
+	  };
+  
+	  // Set initial value
+	  handleResize();
+  
+	  // Add event listener
+	  window.addEventListener('resize', handleResize);
+  
+	  // Clean up event listener on component unmount
+	  return () => {
+		window.removeEventListener('resize', handleResize);
+	  };
+	}, []); 
 
 	return (
 		<div className={styles.page}>
