@@ -61,7 +61,7 @@ const MenuBuild = () => {
 				<a id="login" className={styles.menuItem} href="/login">
 					Log In
 				</a>
-				<a id="signup" className={styles.menuItem} href="/contact">
+				<a id="signup" className={styles.menuItem} href="/signup">
 					Sign Up
 				</a>
 			</div>

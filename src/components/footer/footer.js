@@ -35,26 +35,26 @@ function BackToTopButton() {
 
 const footerData = {
   sell: [
-    { label: "Salgsavurdering", link: "" },
-    { label: "Mit Boligsalg", link: "" },
-    { label: "Find an Agent", link: "" },
+    { label: "Sales Evaluation", link: "/sell" },
+    { label: "Find an Agent", link: "/about" },
+    { label: "", link: "" },
     { label: "", link: "" },
   ],
   buy: [
     { label: "Buy Properties", link: "/buy" },
-    { label: "Køberrådgiving", link: "" },
+    { label: "Buying Guide", link: "/blog/6418576e26d8eda8bbe16728" },
     { label: "", link: "" },
     { label: "", link: "" },
   ],
   blog: [
-    { label: "Salgsavurdering", link: "" },
-    { label: "Selling", link: "" },
-    { label: "First House", link: "" },
-    { label: "Summerhouse", link: "" },
+    { label: "Divorce", link: "/blog/6418576e26d8eda8bbe16729" },
+    { label: "Selling", link: "/blog/23423423423" },
+    { label: "First House", link: "/blog/6418576e26d8eda8bbe16728" },
+    { label: "Summerhouse", link: "/blog/34234234423" },
   ],
   aboutUs: [
-    { label: "Contact", link: "" },
-    { label: "Our Agents", link: "" },
+    { label: "Contact", link: "/contact" },
+    { label: "Our Agents", link: "/about" },
     { label: "", link: "" },
   ],
   copy: "©2023 Tiia Pitkänen",

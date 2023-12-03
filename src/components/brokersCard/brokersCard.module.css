@@ -77,12 +77,12 @@
   .cardContainer h3 {
 
 
-    font-size: 25px;
+    font-size: 30px;
   }
 
   .cardContainer p {
 
-    font-size: 15px;
+    font-size: 18px;
     text-align: center;
     padding: 0 2rem;
   }
@@ -95,6 +95,12 @@
     border-top: none;
   }
 
+
+  .cardContainer button {
+  
+    font-size: 18px;
+   
+  }
 }
 
 

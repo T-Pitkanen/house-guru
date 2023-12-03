@@ -8,7 +8,6 @@
   height: 75vh;
 
   filter: blur(2px);
-
 }
 
 .backgroundImage img {
@@ -25,8 +24,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-
 }
 
 .aboutWrapper {
@@ -35,7 +32,6 @@
   border: 1px solid #d3d3d3;
   color: #616161;
   padding: 2rem 1rem;
-
 }
 
 .aboutHeader {
@@ -45,13 +41,12 @@
   justify-content: center;
   text-align: center;
   gap: 2rem;
-  border-bottom: 1px solid #c9c9c9;
+  border-bottom: 1px solid #999999;
   padding-bottom: 5vh;
-
 }
 
 .aboutHeader h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-weight: 400;
 }
 
@@ -70,7 +65,6 @@
   align-items: center;
 }
 
-
 .brokersWrapper {
   padding: 2rem 0;
   background-color: #f6f6f6;
@@ -84,7 +78,7 @@
 .brokers h2 {
   font-size: 30px;
   font-weight: 400;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
 }
 
 .brokerInfo {
@@ -101,9 +95,8 @@
   object-fit: cover;
 }
 
-@media (min-width:1600px) {
-
-  .aboutPage{
+@media (min-width: 1280px) and (max-width: 1600px) {
+  .aboutPage {
     margin-top: 20vh;
   }
 
@@ -116,36 +109,66 @@
   }
 
   .aboutHeader {
-   width: 60%;
-  
+    width: 60%;
   }
-  
+
   .aboutHeader h1 {
     font-size: 35px;
   }
-  
+
   .aboutHeader p {
     font-size: 18px;
   }
 
+  .brokersWrapper {
+    width: 50%;
+  }
 
+  .brokers {
+    gap: 3rem;
+  }
 
-.brokersWrapper {
- width: 50%;
-
+  .brokers img {
+    width: 70%;
+    height: 30vh;
+  }
 }
 
-.brokers {
-  
-  gap: 3rem;
-}
+@media (min-width: 1600px) {
+  .aboutPage {
+    margin-top: 20vh;
+  }
 
+  .aboutWrapper {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
+  .aboutHeader {
+    width: 60%;
+  }
 
+  .aboutHeader h1 {
+    font-size: 35px;
+  }
 
-.brokers img {
-  width: 70%;
-  height: 30vh;
-  
-}
+  .aboutHeader p {
+    font-size: 18px;
+  }
+
+  .brokersWrapper {
+    width: 50%;
+  }
+
+  .brokers {
+    gap: 3rem;
+  }
+
+  .brokers img {
+    width: 70%;
+    height: 30vh;
+  }
 }

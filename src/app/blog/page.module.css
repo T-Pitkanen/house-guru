@@ -44,11 +44,16 @@
   object-fit: cover;
 }
 
-@media (min-width: 1600px) {
+@media only screen and (min-width: 1280px) and (max-width: 1600px) {
+  .blog {
+    margin-top: 20vh;
+    width: 100%;
+  }
+}
 
-    .blog {
-        margin-top: 20vh;
-        width: 100%;
-       
-      }
+@media (min-width: 1600px) {
+  .blog {
+    margin-top: 20vh;
+    width: 100%;
+  }
 }

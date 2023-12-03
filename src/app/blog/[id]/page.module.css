@@ -6,9 +6,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
-
 
 .headerWrapper {
   width: 100%;
@@ -24,9 +22,7 @@
   border-top: 1px solid rgb(207, 207, 207);
   margin-bottom: 12vh;
   gap: 2rem;
-  
 }
-
 
 .headerWrapper h1 {
   color: #424242;
@@ -35,7 +31,6 @@
   font-weight: 500;
   /* font-family: 'Playfair Display', serif; */
 }
-
 
 .postWrapper {
   display: flex;
@@ -59,14 +54,12 @@
   padding-bottom: 5vh;
 }
 
-
 .contentWrapper {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #fafafafa;
-
 }
 
 .postTitle {
@@ -80,37 +73,60 @@
   width: 100%;
 }
 
-
-
-@media (min-width: 1600px) {
-
+@media only screen and (min-width: 1280px) and (max-width: 1600px) {
   .headerWrapper {
     width: 100%;
     gap: 3rem;
-    
   }
 
   .headerWrapper h1 {
     font-size: 35px;
-    font-family: 'Playfair Display', serif;
-    
+    font-family: "Playfair Display", serif;
   }
 
-  .headerWrapper img{
+  .headerWrapper img {
     width: 50%;
   }
 
-
-  .postTitle{
-    font-size:20px;
+  .postTitle {
+    font-size: 20px;
   }
 
-  .content{
+  .content {
+    width: 50%;
+    font-size: 18px;
+  }
+
+  .contentOne {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .headerWrapper {
+    width: 100%;
+    gap: 3rem;
+  }
+
+  .headerWrapper h1 {
+    font-size: 35px;
+    font-family: "Playfair Display", serif;
+  }
+
+  .headerWrapper img {
+    width: 50%;
+  }
+
+  .postTitle {
+    font-size: 20px;
+  }
+
+  .content {
     width: 40%;
     font-size: 18px;
   }
 
-  .contentOne{
+  .contentOne {
     width: 100%;
   }
 }

@@ -52,7 +52,7 @@
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid #b8b8b8;
+  border: 1px solid #9c9c9c;
   background-color: #ffffff;
   width: 80%;
   color: #1a1a1a;
@@ -99,11 +99,35 @@
   margin-bottom: 10vh;
 }
 
+@media only screen and (min-width: 1280px) and (max-width: 1600px) {
+  .form {
+    width: 40%;
+    background-color: #eeeeee;
+  }
+
+  .formHeader hr {
+    width: 20%;
+  }
+
+  .formHeader h2 {
+    font-size: 30px;
+  }
+
+  .formHeader p {
+    font-size: 18px;
+    width: 80%;
+  }
+
+  .form input[type="submit"] {
+    font-size: 18px;
+    width: 15%;
+  }
+}
+
 @media (min-width: 1600px) {
   .form {
     width: 40%;
     background-color: #eeeeee;
-
   }
 
   .formHeader hr {
@@ -120,7 +144,7 @@
   }
 
   .form input[type="submit"] {
-   font-size: 17px;
+    font-size: 17px;
     width: 15%;
   }
 }
