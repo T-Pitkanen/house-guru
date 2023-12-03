@@ -72,7 +72,7 @@
 }
 
 /* Individual item */
-.bm-item {
+.bmItem{
   display: inline-block;
   margin-left: 3vw;
   border-bottom: 1px solid #858585;
@@ -81,4 +81,22 @@
 /* Styling of overlay */
 .bm-overlay {
   background: rgba(0, 0, 0, 0.733);
+}
+
+.loginSign{
+  display: flex;
+  gap: 5rem;
+  padding-top: 2rem;
+  border-bottom: none;
+}
+
+.loginItem{
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: 3vw;
+}
+
+.signItem{
+  padding-right: 1rem;
+  padding-left: 1rem;
 }

@@ -14,6 +14,7 @@ import Accordion from "@/components/accordion/accordion";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
+
 const Slider = ({ id }) => {
   const router = useRouter();
 
@@ -61,6 +62,7 @@ useEffect(() => {
         console.error("Error fetching property:", error);
       });
   }, [id]);
+
 
   
 
@@ -153,6 +155,24 @@ const PropertyPage = ({ params }) => {
     };
   }, []);
 
+  const onSubmit = (event) => {
+    event.preventDefault();
+  
+    const name = event.target.name.value;
+    const phone = event.target.phone.value;
+    const email = event.target.email.value;
+    const message = event.target.message.value;
+  
+    fetch('/api/emails', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ name, phone, email, message }),
+    });
+  };
+
+
   return (
     <>
       <div className={isVisible ? styles.infoVisible : styles.infoHidden}>
@@ -198,7 +218,7 @@ const PropertyPage = ({ params }) => {
                 <p>(+45) 12 34 56 </p>
                 <p>contact@houseguru.com</p> <p>OR</p>
               </div>
-              <form>
+              <form onSubmit={onSubmit}>
                 <input type="text" name="name" placeholder="Name:" />
                 <input type="tel" name="phone" placeholder="Phone:" />
                 <input type="email" name="email" placeholder="Email:" />
