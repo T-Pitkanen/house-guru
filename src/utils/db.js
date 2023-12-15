@@ -31,4 +31,3 @@ export async function connectToDatabase() {
   return client.db('properties'); // Return the database connection
 }
 
-// run().catch(console.dir);

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { redirect } from 'next/navigation'
-import { NextResponse } from 'next/server'
+import { redirect } from "next/navigation";
+import { NextResponse } from "next/server";
 import styles from "./login.module.css";
 
 const LoginForm = () => {
@@ -12,11 +12,9 @@ const LoginForm = () => {
   } = useForm();
 
   const [loginError, setLoginError] = useState("");
-  
-  
 
- const onSubmit = (data) => {
-  console.log(data)
+  const onSubmit = (data) => {
+    console.log(data);
     fetch("/api/login", {
       method: "POST",
       headers: {
@@ -31,13 +29,8 @@ const LoginForm = () => {
         return response.json();
       })
       .then((data) => {
-        
-        // Store the token in local storage (or somewhere else)
-        window.location.href = '/loggedin';
+        window.location.href = "/loggedin";
         localStorage.setItem("token", data.token);
-
-        // Redirect to the admin page
-        // return NextResponse.redirect(new URL('/', request.url))
       })
       .catch((error) => {
         setLoginError(error.message);

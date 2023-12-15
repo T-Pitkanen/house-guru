@@ -9,27 +9,7 @@ import About from '@/components/about/about';
 import FeaturingCard from '@/components/featuring/featuring';
 
 export default function Home() {
-	/*
-	const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 1300);
 
-	useEffect(() => {
-	  const handleResize = () => {
-		setIsLargeScreen(window.innerWidth > 1300);
-	  };
-  
-	   // Check if window is defined to avoid issues with server-side rendering
-	   if (typeof window !== 'undefined') {
-		setIsLargeScreen(window.innerWidth > 1300);
-		window.addEventListener('resize', handleResize);
-	  }
-  
-	  // Clean up the event listener when the component unmounts
-	  return () => {
-		if (typeof window !== 'undefined') {
-		  window.removeEventListener('resize', handleResize);
-		}
-	  };
-	}, []); */
 
 	const [isLargeScreen, setIsLargeScreen] = useState(false);
 
@@ -38,13 +18,13 @@ export default function Home() {
 		setIsLargeScreen(window.innerWidth > 1300);
 	  };
   
-	  // Set initial value
+	
 	  handleResize();
   
-	  // Add event listener
+	 
 	  window.addEventListener('resize', handleResize);
   
-	  // Clean up event listener on component unmount
+	
 	  return () => {
 		window.removeEventListener('resize', handleResize);
 	  };

@@ -25,7 +25,6 @@ const brokers = [
 		education: "Certified Real Estate Specialist (CRES)",
 		image: '/brokers/broker-woman.jpg',
 	},
-	// Add more broker objects here...
 ];
 
 const Background = () => {

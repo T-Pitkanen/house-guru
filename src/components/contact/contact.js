@@ -31,30 +31,37 @@ const ContactForm = () => {
 
   const [message, setMessage] = useState('')
 
+
   const onSubmit = async (data) => {
-    const response = await fetch('/api/Messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
+    
+    try {
+      const response = await fetch('/api/emails', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
   
-    if (response.ok) {
-      console.log('Data saved successfully');
-      reset();
-      console.log(data);
-      setMessage('Sent!')
-      setTimeout(() => {
-        setMessage('Submit');
-      }, 5000);
-    } else {
-      console.error('Error saving data');
+      if (response.ok) {
+        console.log('Email sent successfully');
+        reset(); 
+        setMessage('Email Sent!');
+        setTimeout(() => {
+          setMessage('Submit'); 
+        }, 5000);
+      } else {
+       
+        const errorText = await response.text();
+        console.error('Error sending email:', errorText);
+        setMessage(`Error: ${errorText}`); 
+      }
+    } catch (error) {
+     
+      console.error('Network error:', error);
+      setMessage('Network Error. Please try again.'); 
     }
   };
-
-  // const onSubmit = (data) => console.log(data);
-  // console.log(errors);
 
   return (
     <div className={styles.formWrapper}>

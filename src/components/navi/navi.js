@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback  } from "react";
+import throttle from 'lodash/throttle';
 import { slide as Menu } from "react-burger-menu";
 import { poppins } from "@/utils/fonts";
 import Image from "next/image";
@@ -145,66 +146,57 @@ const MenuBuild = ({ isOpen, onStateChange }) => {
 };
 
 const HamburgerMenu = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [windowWidth, setWindowWidth] = useState();
-  const [isScreenSizeChecked, setIsScreenSizeChecked] = useState(false);
+  const [menuState, setMenuState] = useState({
+    isOpen: false,
+    isVisible: true,
+    windowWidth: undefined,
+  });
 
   const handleMenuToggle = () => {
-    setMenuOpen(!menuOpen);
+    setMenuState((prevState) => ({ ...prevState, isOpen: !prevState.isOpen }));
   };
 
+  const handleResize = useCallback(
+    throttle(() => {
+      setMenuState((prevState) => ({ ...prevState, windowWidth: window.innerWidth }));
+    }, 100),
+    []
+  );
+
   useEffect(() => {
-    setWindowWidth(window.innerWidth);
-    setIsScreenSizeChecked(true);
-
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+    handleResize(); 
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [handleResize]);
 
   useEffect(() => {
     let lastScrollTop = 0;
 
     const handleScroll = () => {
-      let st = window.pageYOffset || document.documentElement.scrollTop;
-      if (st > lastScrollTop) {
-        setIsVisible(false);
-      } else {
-        setIsVisible(true);
-      }
-      lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      setMenuState((prevState) => ({
+        ...prevState,
+        isVisible: currentScroll < lastScrollTop || currentScroll <= 0,
+      }));
+      lastScrollTop = currentScroll;
     };
 
-    window.addEventListener("scroll", handleScroll, false);
-    return () => {
-      window.removeEventListener("scroll", handleScroll, false);
-    };
+    window.addEventListener('scroll', handleScroll, false);
+    return () => window.removeEventListener('scroll', handleScroll, false);
   }, []);
 
-  if (!isScreenSizeChecked) {
-    return null; // Don't render anything until screen size is confirmed
-  }
-
-  if (windowWidth >= 490) {
-    return null; // Don't render anything on larger screens
+  if (menuState.windowWidth === undefined || menuState.windowWidth >= 490) {
+    return null;
   }
 
   return (
-    <div className={isVisible ? style.navVisible : style.navHidden}>
-      <>
-        <Logo />
-        <MenuBuild
-          isOpen={menuOpen}
-          onStateChange={({ isOpen }) => setMenuOpen(isOpen)}
-        />
-      </>
-    </div>
+    <div className={menuState.isVisible ? style.navVisible : style.navHidden}>
+    <Logo />
+    <MenuBuild
+      isOpen={menuState.isOpen}
+      onStateChange={({ isOpen }) => setMenuState((prevState) => ({ ...prevState, isOpen }))}
+    />
+  </div>
   );
 };
 

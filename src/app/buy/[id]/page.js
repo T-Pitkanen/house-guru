@@ -180,7 +180,7 @@ const PropertyPage = ({ params }) => {
           {property.address}, {property.location}
         </p>
         <p className={styles.infoPrice}>{property.price}€</p>
-        {/* Rest of your component */}
+        
       </div>
 
       <div className={styles.propertyContainer}>

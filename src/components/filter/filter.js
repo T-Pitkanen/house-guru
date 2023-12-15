@@ -67,7 +67,7 @@ const FilterBuild = () => {
 
 			setFilteredProperties(filtered);
 
-			// setHasFiltered(true); //added 21:53
+		
 
 			setIsLoading(false);
 
