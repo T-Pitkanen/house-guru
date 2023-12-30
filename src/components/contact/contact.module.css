@@ -102,7 +102,7 @@
 @media only screen and (min-width: 1280px) and (max-width: 1600px) {
   .form {
     width: 40%;
-    background-color: #eeeeee;
+    background-color: #f3f3f3;
   }
 
   .formHeader hr {

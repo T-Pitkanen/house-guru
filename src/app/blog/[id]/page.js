@@ -37,11 +37,11 @@ const PostPage = ({ params }) => {
 					<div className={styles.headerWrapper}>
 						<h1>{post.title}</h1>
 						<Image
-								src={post.image}
-								alt={post.title}
-								width={500}
-								height={500}
-							/>
+							src={post.image}
+							alt={post.title}
+							width={1000}
+							height={1000}
+						/>
 					</div>
 					<div className={styles.contentWrapper}>
 						<div className={styles.content}>
