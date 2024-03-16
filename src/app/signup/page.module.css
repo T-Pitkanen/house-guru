@@ -13,7 +13,7 @@
   top: 0;
   z-index: -1;
   width: 100%;
-  height: 35vh;
+  height: 55vh;
   filter: blur(4px);
 }
 
@@ -21,4 +21,13 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1600px) {
+
+  .backgroundImage {
+
+    height: 55vh;
+
+  }
 }

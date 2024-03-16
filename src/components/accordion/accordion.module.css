@@ -5,7 +5,7 @@
     align-items: center;
 }
 
-.accordionWrapper button{
+.accordionWrapper button {
     color: rgb(58, 58, 58);
     width: 100%;
     padding: 2rem 2rem;
@@ -21,7 +21,7 @@
     justify-content: space-between;
 }
 
-.accChildren{
+.accChildren {
     width: 80%;
     color: rgb(70, 70, 70);
     display: flex;
@@ -32,14 +32,14 @@
 
 
 
-@media only screen and (min-width:1600px) {
+@media only screen and (min-width:1500px) {
 
 
 
-.accChildren{
-    width: 90%;
-   
-}
+    .accChildren {
+        width: 90%;
+
+    }
 
 
 

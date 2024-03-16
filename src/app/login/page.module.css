@@ -24,7 +24,12 @@
 }
 
 @media only screen and (min-width: 1280px) and (max-width: 1600px) {
+
+  .backgroundImage {
+
+    height: 55vh;
+
+  }
 }
 
-@media only screen and (min-width: 1600px) {
-}
+@media only screen and (min-width: 1600px) {}
