@@ -133,14 +133,14 @@ const MenuBuild = ({ isOpen, onStateChange }) => {
       <a id="contact" className={style.bmItem} href="/contact">
         Contact
       </a>
-      <div className={style.loginSign}>
+      {/* <div className={style.loginSign}>
         <a id="login" className={`${style.bmItem} ${style.loginItem}`} href="/login">
           Log In
         </a>
         <a id="signup" className={`${style.bmItem} ${style.signItem}`} href="/signup">
           Sign Up
         </a>
-      </div>
+      </div> */}
     </Menu>
   );
 };
