@@ -35,7 +35,7 @@ export default function Home() {
 			<div className={styles.pageHeader}>
 				<h1>Buying, selling or planning?</h1>
 				<p>
-					We have the best deals for you. Find your dream home, or sell your
+					We have the best deals for you. <br/> Find your dream home, or sell your
 					house with us.
 				</p>
 			</div>

@@ -79,12 +79,12 @@ const MenuBuild = () => {
         <a id="contact" className={styles.menuItem} href="/contact">
           Contact
         </a>
-        <a id="login" className={styles.menuItem} href="/login">
+        {/* <a id="login" className={styles.menuItem} href="/login">
           Log In
         </a>
         <a id="signup" className={styles.menuItem} href="/signup">
           Sign Up
-        </a>
+        </a> */}
       </div>
     </div>
   );
