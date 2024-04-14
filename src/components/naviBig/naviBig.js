@@ -21,9 +21,15 @@ const Logo = () => {
 };
 
 const useScrollPosition = () => {
+  const isClient = typeof window === 'object';
   const [isVisible, setIsVisible] = useState(true);
+  const [windowWidth, setWindowWidth] = useState(isClient ? window.innerWidth : 1024);
 
   useEffect(() => {
+    if (!isClient) {
+      return false;
+    }
+
     let previousScrollPosition = window.pageYOffset;
 
     const handleScroll = () => {
@@ -34,9 +40,9 @@ const useScrollPosition = () => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, []); // Empty array ensures that effect is only run on mount and unmount
 
-  return isVisible;
+  return { isVisible, windowWidth };
 };
 
 
@@ -52,6 +58,8 @@ const useScrollPosition = () => {
 
 //   return windowWidth;
 // };
+
+
 
 const useWindowSize = () => {
   const isClient = typeof window === 'object';
@@ -72,7 +80,7 @@ const useWindowSize = () => {
 };
 
 const MenuBuild = () => {
-  const isVisible = useScrollPosition();
+  const { isVisible } = useScrollPosition();
   const menuClass = isVisible ? styles.menuVisible : styles.menuHidden;
 
   return (
@@ -109,10 +117,8 @@ const MenuBuild = () => {
 };
 
 const BigMenu = () => {
-  const windowWidth = useWindowSize();
-
   return (
-    <div className={windowWidth > 480 ? styles.menuVisible : styles.menuHidden}>
+    <div className={styles.menuVisible}>
       <MenuBuild />
     </div>
   );
