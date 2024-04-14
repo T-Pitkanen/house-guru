@@ -40,10 +40,28 @@ const useScrollPosition = () => {
 };
 
 
+// const useWindowSize = () => {
+//   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+//   useEffect(() => {
+//     const handleResize = () => setWindowWidth(window.innerWidth);
+
+//     window.addEventListener("resize", handleResize);
+//     return () => window.removeEventListener("resize", handleResize);
+//   }, []);
+
+//   return windowWidth;
+// };
+
 const useWindowSize = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const isClient = typeof window === 'object';
+  const [windowWidth, setWindowWidth] = useState(isClient ? window.innerWidth : undefined);
 
   useEffect(() => {
+    if (!isClient) {
+      return false;
+    }
+
     const handleResize = () => setWindowWidth(window.innerWidth);
 
     window.addEventListener("resize", handleResize);
