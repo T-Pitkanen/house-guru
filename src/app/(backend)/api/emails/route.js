@@ -1,10 +1,9 @@
-import nodemailer from "nodemailer";
+/*
 import { google } from "googleapis";
 import { NextResponse } from "next/server";
 import { Response } from "next";
 
 const OAuth2 = google.auth.OAuth2;
-
 export async function POST(req) {
   const { name, phone, email, message } = req.body;
 
@@ -61,3 +60,4 @@ export async function POST(req) {
     });
   }
 }
+*/
