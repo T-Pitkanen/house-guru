@@ -1,16 +1,28 @@
-// src/app/BlogPage.js
+import Image from "next/image";
+import styles from "./page.module.css";
+import Posts from "@/components/posts/posts";
+import Post from "@/components/post/post";
 
-'use client'
-
-import BlogList from "@/components/blogPages";
-import styles from "./page.module.css"
-
-const BlogPage = () => {
+const Background = () => {
   return (
-    <div className={styles.page}>
-      <BlogList />
+    <div className={styles.backgroundImage}>
+      <Image
+        src="/landing-bg.jpg"
+        alt="background image for contact page"
+        width={300}
+        height={300}
+      />
     </div>
   );
 };
 
-export default BlogPage;
+const PostsPage = () => {
+  return (
+    <div className={styles.blog}>
+      <Background />
+      <Posts></Posts>
+    </div>
+  );
+};
+
+export default PostsPage;

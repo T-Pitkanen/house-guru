@@ -1,0 +1,149 @@
+.formWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10vh;
+}
+
+.formHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #777777;
+  gap: 0.75rem;
+  margin-bottom: 5vh;
+}
+
+.formHeader hr {
+  width: 50%;
+}
+
+.formHeader h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: #5a5a5a;
+}
+
+.formHeader p {
+  font-size: 15px;
+  padding: 0 3rem;
+  color: #6b6b6b;
+  text-align: center;
+}
+
+.form {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8eedb;
+  padding: 2rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="tel"],
+.form textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #9c9c9c;
+  background-color: #ffffff;
+  width: 80%;
+  color: #1a1a1a;
+  font-size: 15px;
+  resize: none;
+  font-family: inherit;
+}
+
+.form input[type="submit"] {
+  background-color: var(--color-main-button);
+  border: none;
+  color: white;
+  padding: 0.5rem;
+  margin-top: 3vh;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 40%;
+}
+
+.backgroundImage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+
+  width: 100%;
+  height: 65vh;
+
+  filter: blur(2px);
+}
+
+.backgroundImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contactInfo {
+  color: #303030;
+  margin-bottom: 10vh;
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1600px) {
+  .form {
+    width: 40%;
+    background-color: #f3f3f3;
+  }
+
+  .formHeader hr {
+    width: 20%;
+  }
+
+  .formHeader h2 {
+    font-size: 30px;
+  }
+
+  .formHeader p {
+    font-size: 18px;
+    width: 80%;
+  }
+
+  .form input[type="submit"] {
+    font-size: 18px;
+    width: 15%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .form {
+    width: 40%;
+  }
+
+  .formHeader hr {
+    width: 20%;
+  }
+
+  .formHeader h2 {
+    font-size: 30px;
+  }
+
+  .formHeader p {
+    font-size: 18px;
+    width: 60%;
+  }
+
+  .form input[type="submit"] {
+    font-size: 17px;
+    width: 15%;
+  }
+}

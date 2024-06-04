@@ -1,0 +1,48 @@
+.button {
+  margin-top: 8vh;
+  padding: 0.5rem 0.75rem;
+  border: none;
+  border-radius: 5px;
+  color: rgb(231, 231, 231);
+  font-size: 18px;
+  background-color: var(--color-main-button);
+  width: 30%;
+}
+
+.icon {
+  font-size: 14px;
+  margin-right: 2vw;
+}
+
+@media only screen and (min-width:400px) and (max-width:480px) {}
+
+@media only screen and (min-width:480px) and (max-width:640px) {}
+
+@media only screen and (min-width:640px) and (max-width:1024px) {}
+
+@media only screen and (min-width:1024px) and (max-width:1280px) {}
+
+@media only screen and (min-width:1280px) and (max-width:1600px) {
+  .button {
+    font-size: 16px;
+    width: 6%;
+
+  }
+
+  .icon {
+    font-size: 16px;
+    margin-right: 1vw;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  .button {
+    font-size: 18px;
+    width: 6%;
+  }
+
+  .icon {
+    font-size: 16px;
+    margin-right: 1vw;
+  }
+}

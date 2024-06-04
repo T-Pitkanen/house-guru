@@ -1,0 +1,46 @@
+.accordionWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.accordionWrapper button {
+    color: rgb(58, 58, 58);
+    width: 100%;
+    padding: 2rem 2rem;
+    background-color: transparent;
+    border: none;
+    border-top: 1px solid #d4d4d4;
+    /* border-bottom: 1px solid #c5c5c5; */
+    font-size: 21px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.accChildren {
+    width: 80%;
+    color: rgb(70, 70, 70);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+
+
+@media only screen and (min-width:1500px) {
+
+
+
+    .accChildren {
+        width: 90%;
+
+    }
+
+
+
+}

@@ -1,0 +1,363 @@
+.filterContainer {
+    border-top: solid 0.5px #c2c2c2;
+    border-bottom: solid 0.5px #c2c2c2;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.filterContainer form {
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+    width: 85%;
+}
+
+
+.middleContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+}
+
+.searchIcon {
+    margin-right: 2vw;
+}
+
+/* .selectWrapper{
+    width: 100%;
+} */
+
+.middleContainer select {
+    color: #3d3d3d;
+    font-size: 13px;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 0.5px solid #c2c2c2;
+    border-radius: 5px;
+}
+
+.middleContainer select :focus {
+    outline: none;
+    border: 0.5px solid #c2c2c2;
+    border-radius: 5px;
+}
+
+
+.middleContainer input {
+    color: #3d3d3d;
+    font-size: 14px;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    border: 0.5px solid #c2c2c2;
+    border-radius: 5px;
+
+}
+
+.midSecond {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    width: 100%;
+}
+
+.idSearch {
+    height: auto;
+    width: 100%;
+}
+
+
+.midThird p {
+    color: #303030;
+    font-size: 14px;
+    padding-bottom: 1vh;
+
+}
+
+.midThird {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+
+
+.priceContainer,
+.sizeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    margin-bottom: 2vh;
+}
+
+.price,
+.size {
+    display: flex;
+    color: black;
+    gap: 1rem;
+}
+
+.price input,
+.size input {
+    padding: 0 1rem;
+    width: 50%;
+}
+
+.buttons {
+    margin-top: 2vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons button {
+    background-color: var(--color-main-button);
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    width: 45%;
+    color: rgb(231, 231, 231);
+    font-size: 13px;
+
+}
+
+@media only screen and (min-width:400px) and (max-width:480px) {}
+
+@media only screen and (min-width:480px) and (max-width:640px) {}
+
+@media only screen and (min-width:640px) and (max-width:1024px) {}
+
+@media only screen and (min-width:1024px) and (max-width:1280px) {}
+
+@media only screen and (min-width:1280px) and (max-width:1600px) {
+    .selectWrapper {
+        width: 18%;
+    }
+
+
+    .filterContainer form {
+
+        margin-bottom: 2vh;
+
+    }
+
+
+    .middleContainer,
+    .midSecond,
+    .midThird {
+        flex-direction: row;
+        /* justify-content: space-between; */
+        align-items: center;
+        /* width: 100%; */
+    }
+
+    .midSecond {
+        width: 50%;
+    }
+
+
+    .midThird {
+        gap: 3rem;
+    }
+
+    .idSearch {
+        width: 150px;
+    }
+
+    .priceContainer,
+    .sizeContainer {
+
+        flex-direction: row;
+        margin-bottom: 0;
+        gap: 0.5rem;
+        padding-bottom: 0;
+        align-items: center;
+        font-weight: 600;
+    }
+
+    .middleContainer {
+
+        gap: 1rem;
+
+    }
+
+
+    .midThird p {
+        padding-bottom: 0;
+        color: #5e5e5e;
+        font-size: 16px;
+        letter-spacing: 1px;
+
+    }
+
+    .midThird {
+        width: 60%;
+        gap: 1rem;
+    }
+
+
+    .price,
+    .size {
+        gap: 0.25rem;
+        width: 100%;
+    }
+
+    .price input,
+    .size input {
+        text-align: center;
+        padding: 0.3rem 0rem;
+    }
+
+
+    .filterWrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .buttons {
+        margin-top: 0;
+        margin-left: 2vw;
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .buttons button {
+
+        padding: 0.25rem 0.5rem;
+        width: 100%;
+        font-size: 13px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .searchIcon {
+        margin-right: 0.2rem;
+    }
+}
+
+
+
+/* RESPONSIVE */
+@media (min-width:1600px) {
+
+
+
+
+    .selectWrapper {
+        width: 15%;
+    }
+
+
+    .filterContainer form {
+
+        margin-bottom: 2vh;
+
+    }
+
+
+    .middleContainer,
+    .midSecond,
+    .midThird {
+        flex-direction: row;
+        /* justify-content: space-between; */
+        align-items: center;
+        /* width: 100%; */
+    }
+
+    .midSecond {
+        width: 40%;
+    }
+
+
+    .midThird {
+        gap: 3rem;
+    }
+
+    .idSearch {
+        width: 200px;
+    }
+
+    .priceContainer,
+    .sizeContainer {
+
+        flex-direction: row;
+        margin-bottom: 0;
+        gap: 1rem;
+        padding-bottom: 0;
+        align-items: center;
+        font-weight: 600;
+    }
+
+
+    .midThird p {
+        padding-bottom: 0;
+        color: #5e5e5e;
+        font-size: 16px;
+        letter-spacing: 1px;
+
+    }
+
+    .midThird {
+        gap: 0rem;
+    }
+
+
+    .price,
+    .size {
+        gap: 0.25rem;
+        width: 70%;
+    }
+
+    .price input,
+    .size input {
+        padding: 0.3rem 1rem;
+        text-align: center;
+    }
+
+
+    .filterWrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .buttons {
+        margin-top: 0;
+        width: 20%;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .buttons button {
+
+        padding: 0.4rem 0;
+        width: 40%;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .searchIcon {
+        margin-right: 0.5rem;
+    }
+
+
+
+
+}

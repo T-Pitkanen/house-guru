@@ -1,8 +1,59 @@
-.page {
-    color: black;
+.blog {
+  margin-top: 13vh;
+  margin-bottom: 8vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #505050;
+  text-align: center;
+}
+
+.blogHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 15vh;
+  background-color: #f3f1ee;
+  margin-bottom: 10vh;
+  border: 0.5px solid #d3d3d3;
+}
+
+.blog h1 {
+  font-family: "Playfair Display", "serif";
+  font-weight: 500;
+}
+
+.backgroundImage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+
+  width: 100%;
+  height: 35vh;
+
+  filter: blur(4px);
+}
+
+.backgroundImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1600px) {
+  .blog {
+    margin-top: 20vh;
     width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  }
+}
+
+@media (min-width: 1600px) {
+  .blog {
+    margin-top: 20vh;
+    width: 100%;
+  }
 }

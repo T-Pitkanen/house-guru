@@ -1,7 +1,3 @@
-
-
 ## House Guru - Real Estate Website
 
-Our task is to use next.js to construct a real estate website.
-
-
+https://house-guru.vercel.app/

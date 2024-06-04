@@ -1,7 +1,17 @@
-.naviImage {
-  position: absolute;
-
+.insideImage {
+  width: 20px;
 }
+
+.navVisible {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.navHidden {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
 
 /* Position and sizing of burger button */
 .bm-burger-button {
@@ -14,7 +24,7 @@
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #0c0d11;
+  background: #a0a0a0;
 }
 
 /* Color/shape of burger icon bars on hover*/
@@ -30,7 +40,7 @@
 
 /* Color/shape of close button cross */
 .bm-cross {
-  background: #bdc3c7;
+  background: #cbcdcf;
 }
 
 /*
@@ -44,7 +54,7 @@
 
 /* General sidebar styles */
 .bm-menu {
-  background: #373a47;
+  background: #f5f4f3;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
 }
@@ -56,16 +66,37 @@
 
 /* Wrapper for item list */
 .bm-item-list {
-  color: #b8b7ad;
+  color: #292929;
   padding: 0.8em;
+  text-decoration: underline;
 }
 
 /* Individual item */
-.bm-item {
+.bmItem{
   display: inline-block;
+  margin-left: 3vw;
+  border-bottom: 1px solid #858585;
 }
 
 /* Styling of overlay */
 .bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.733);
+}
+
+.loginSign{
+  display: flex;
+  gap: 5rem;
+  padding-top: 2rem;
+  border-bottom: none;
+}
+
+.loginItem{
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: 3vw;
+}
+
+.signItem{
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
