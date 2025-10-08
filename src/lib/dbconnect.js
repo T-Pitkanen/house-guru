@@ -24,7 +24,16 @@ async function dbConnect() {
     }
 
     cached.promise = mongoose.connect(process.env.MONGODB_URI, opts).then((mongoose) => {
-      console.log('Connected to MongoDB', process.env.MONGODB_URI)
+      try {
+        const raw = process.env.MONGODB_URI || ''
+        // attempt to extract host without printing credentials
+        const hostMatch = raw.match(/@([^/]+)\//)
+        const host = hostMatch ? hostMatch[1] : raw.slice(0, 60)
+        console.log('Connected to MongoDB host:', host)
+      } catch (e) {
+        console.log('Connected to MongoDB')
+      }
+
       return mongoose
     })
   }
